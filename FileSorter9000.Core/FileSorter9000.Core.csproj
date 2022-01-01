@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>FileSorter9000.Core</RootNamespace>
+  </PropertyGroup>
+
+   <ItemGroup>
+     <PackageReference Include="Microsoft.Identity.Client" Version="4.33.0" />
+     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+     <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.7.0" />
+   </ItemGroup>
+
+   <ItemGroup>
+     <ProjectReference Include="..\AiSorter\AiSorter.csproj" />
+     <ProjectReference Include="..\Mp3Mangler\Mp3Mangler.csproj" />
+   </ItemGroup>
+</Project>
