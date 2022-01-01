@@ -14,11 +14,18 @@ Initially I'm limiting the utility to .MP3 files as a proof-of-concept. Later ot
 
 
 **TODO: Expand system to sort any file type **
+
 **TODO: Clean-up unused code and move more functionality out of UWP project to FileSorter9000.Core **
+
 **TODO: Put all long-running processes in background, with progress estimate visible in UI **
+
 **TODO: Train ML functions for various file types **
+
 **TODO: Create a feedback system where rejected path suggestions are used to improve ML model training **
+
 **TODO: Wire media player and image gallery to automatically play/show select file/folder (only demo material currently) **
+
 **TODO: Add dependency injection for various service implementations **
+
 **TODO: Add more asynchronous plumbing **
 
