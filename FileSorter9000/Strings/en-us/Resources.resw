@@ -194,7 +194,7 @@
 I'll explain key features and functionality here.
 Maybe even include images or animations demonstrating how to use the utility.
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sic semper tyrannus et Linux transit gloria computorum entre pandemonium.
+Lorem ipsum dolor sit amet, obiter dictum sic semper tyrannus et Linux transit gloria computorum entre pandemonium.
 
 Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.</value>
     <comment>First use prompt message body</comment>
@@ -242,5 +242,9 @@ Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Ma
   <data name="Settings_LogOut.Content" xml:space="preserve">
     <value>Log out</value>
     <comment>Settings LogOut user content</comment>
+  </data>
+  <data name="FolderSettingsMissingWarning" xml:space="preserve">
+    <value>You must set your example, source, and target folders before making corrections.</value>
+    <comment>Warning if folders aren't set</comment>
   </data>
 </root>

@@ -54,7 +54,7 @@ namespace FileSorter9000.ViewModels
             catch (Exception ex)
             {
                 var toast = new ToastNotificationsService();
-                toast.ShowSimpleToastNotification("No Folders Set!", @"You must set your example, source, and target folders before making corrections.");
+                toast.ShowSimpleToastNotification("No Folders Set!", "FolderSettingsMissingWarning".GetLocalized());
             }
 
             return null;
