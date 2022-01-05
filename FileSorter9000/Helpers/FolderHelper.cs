@@ -27,7 +27,7 @@ namespace FileSorter9000.Helpers
         {
             IStorageFolder folder = await GetFolder().ConfigureAwait(true);
 
-            if (folder != null)
+            if (folder != null && folder is StorageFolder)
             {
                 StorageApplicationPermissions.FutureAccessList.AddOrReplace(tokenName, folder);
             }

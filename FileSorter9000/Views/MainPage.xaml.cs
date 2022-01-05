@@ -1,5 +1,9 @@
-﻿using FileSorter9000.Helpers;
+﻿using FileSorter9000.Core.Services;
+using FileSorter9000.Helpers;
+using FileSorter9000.Services;
 using FileSorter9000.ViewModels;
+
+using System.Threading.Tasks;
 
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -53,9 +57,26 @@ namespace FileSorter9000.Views
         {
             ViewModel.ShowWaitSpinner = true;
 
-            //waitSpinner.IsActive = true;
+            var toast = new ToastNotificationsService();
+            toast.ShowSimpleToastNotification("Please wait...", "TrainingStarted".GetLocalized());
+
+            //Fire and forget (until a Toast message lets user know the data is trained and ready)
+            string directoryPath = TxtExample.Text;
+
+            //TODO: WIP to get files to save in UWP's jail
+            //_ = Mp3DataService.DumpMp3DataAsync(TxtExample.Text);
+            //Task.Run(() => Mp3DataService.DumpMp3DataAsync(directoryPath)).ConfigureAwait(true);
+            //var t = Task.Run(() => DoStuff(directoryPath));
+            //t.Wait();
+
             StartButton.IsEnabled = false;
             this.Frame.Navigate(typeof(TreeViewPage));
+        }
+
+        private async Task<bool> DoStuff(string directoryPath)
+        {
+            await Mp3DataService.DumpMp3DataAsync(directoryPath).ConfigureAwait(true);
+            return true;
         }
 
         private void ToggleStartButton()

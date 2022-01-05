@@ -30,8 +30,9 @@ namespace FileSorter9000.Activation
             NavigationService.Navigate(_navElement, arguments);
 
             // TODO: Add toast notifications when long-running events complete
-            string msg = @"Click OK to see how activation from a toast notification can be handled in the ToastNotificationService.";
-            Singleton<ToastNotificationsService>.Instance.ShowSimpleToastNotification("Sample Toast Notification", msg);
+            //string msg = @"Click OK to see how activation from a toast notification can be handled in the ToastNotificationService.";
+            //Singleton<ToastNotificationsService>.Instance.ShowSimpleToastNotification("Sample Toast Notification", msg);
+
             await Task.CompletedTask.ConfigureAwait(false);
         }
 

@@ -247,4 +247,7 @@ Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Ma
     <value>You must set your example, source, and target folders before making corrections.</value>
     <comment>Warning if folders aren't set</comment>
   </data>
+  <data name="TrainingStarted" xml:space="preserve">
+    <value>Training FileSorter on your filing system</value>
+  </data>
 </root>

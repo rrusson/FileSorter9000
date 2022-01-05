@@ -10,8 +10,12 @@ namespace Mp3Mangler
     {
         static void Main(string[] args)
         {
-            var processor = new Mp3Processor();
-            processor.CleanFiles(@"D:\\Code\\FileSorter9000\\Targets\\");
+            //var processor = new Mp3Processor();
+            //processor.CleanFiles(@"D:\\Code\\FileSorter9000\\Targets\\");
+            var info = new Mp3InfoExtractor();
+
+            info.CreateMp3DataFileAsync(@"E:\temp\MUSIC SORTED").Wait();
+            Console.ReadKey();
         }
     }
 }
