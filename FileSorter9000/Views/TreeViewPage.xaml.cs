@@ -27,9 +27,9 @@ namespace FileSorter9000.Views
 
             try
             {
-                string updatedPath = await update.GetAiPredictedPathAsync(tempTest).ConfigureAwait(true);
+                //string updatedPath = await update.GetAiPredictedPathAsync(tempTest).ConfigureAwait(true);
 
-                toast.ShowSimpleToastNotification("Files Processed!", "Updated Path:" + updatedPath);
+                //toast.ShowSimpleToastNotification("Files Processed!", "Updated Path:" + updatedPath);
             }
             catch (System.Exception ex)
             {

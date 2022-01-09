@@ -5,7 +5,7 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-namespace Mp3Mangler
+namespace AiSorter
 {
     public partial class MLModelMusicFiling
     {
@@ -34,19 +34,19 @@ namespace Mp3Mangler
             public string Comment { get; set; }
 
             [ColumnName(@"Year")]
-            public string Year { get; set; }
+            public float Year { get; set; }
 
             [ColumnName(@"Track")]
-            public string Track { get; set; }
+            public float Track { get; set; }
 
             [ColumnName(@"TrackCount")]
-            public string TrackCount { get; set; }
+            public float TrackCount { get; set; }
 
             [ColumnName(@"Disc")]
-            public string Disc { get; set; }
+            public float Disc { get; set; }
 
             [ColumnName(@"DiscCount")]
-            public string DiscCount { get; set; }
+            public float DiscCount { get; set; }
 
             [ColumnName(@"Lyrics")]
             public string Lyrics { get; set; }
@@ -55,7 +55,7 @@ namespace Mp3Mangler
             public string Grouping { get; set; }
 
             [ColumnName(@"BeatsPerMinute")]
-            public string BeatsPerMinute { get; set; }
+            public float BeatsPerMinute { get; set; }
 
             [ColumnName(@"Conductor")]
             public string Conductor { get; set; }
@@ -138,11 +138,14 @@ namespace Mp3Mangler
             [ColumnName(@"IsEmpty")]
             public string IsEmpty { get; set; }
 
-            [ColumnName(@"FilePath")]
-            public string FilePath { get; set; }
+            [ColumnName(@"FolderPath")]
+            public string FolderPath { get; set; }
+
+            [ColumnName(@"FileName")]
+            public string FileName { get; set; }
 
             [ColumnName(@"FileSize")]
-            public string FileSize { get; set; }
+            public float FileSize { get; set; }
 
             [ColumnName(@"CreateDate")]
             public string CreateDate { get; set; }

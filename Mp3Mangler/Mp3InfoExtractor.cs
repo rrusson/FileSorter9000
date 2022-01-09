@@ -30,7 +30,6 @@ namespace Mp3Mangler
 
 			//var folder = await StorageApplicationPermissions.FutureAccessList.GetFolderAsync("ExampleFolderToken");
 
-			//using (var csv = new CsvWriter(new StreamWriter($@"{directory}\mp3list.csv"), config))
 			using (var csv = new CsvWriter(new StreamWriter($@"{directory}\mp3list.csv"), config))
 			{
 				var mp3Info = GetMp3InfoCollection(directory).ToList();

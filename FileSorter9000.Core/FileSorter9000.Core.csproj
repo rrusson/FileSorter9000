@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>FileSorter9000.Core</RootNamespace>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
    <ItemGroup>
@@ -12,7 +13,6 @@
    </ItemGroup>
 
    <ItemGroup>
-     <ProjectReference Include="..\AiSorter\AiSorter.csproj" />
      <ProjectReference Include="..\Mp3Mangler\Mp3Mangler.csproj" />
    </ItemGroup>
 </Project>

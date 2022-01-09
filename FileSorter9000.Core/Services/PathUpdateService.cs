@@ -1,23 +1,23 @@
 ﻿using System.Threading.Tasks;
 
-using AiSorter;
+//using AiSorter;
 
 namespace FileSorter9000.Core.Services
 {
 	public class PathUpdateService
 	{
 		//TODO: Add dependency injection for service implementation
-		public IPathPredictor PredictionService { get; private set; } = new OpenAiPathPredictor();
+		//public IPathPredictor PredictionService { get; private set; } = new OpenAiPathPredictor();
 
 		//public PathUpdateService(IPathPredictor predictor)
 		//{
 		//	PredictionService = predictor;
 		//}
 
-		public async Task<string> GetAiPredictedPathAsync(string path)
-		{
-			return await PredictionService.GetSuggestedPathAsync(path).ConfigureAwait(true);
-		}
+		//public async Task<string> GetAiPredictedPathAsync(string path)
+		//{
+		//	return await PredictionService.GetSuggestedPathAsync(path).ConfigureAwait(true);
+		//}
 
 		public Task<string> GetId3TagRulesPathAsync(string path)
 		{

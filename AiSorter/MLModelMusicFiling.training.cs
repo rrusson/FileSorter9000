@@ -8,7 +8,7 @@ using Microsoft.ML.Data;
 using Microsoft.ML.Trainers;
 using Microsoft.ML;
 
-namespace Mp3Mangler
+namespace AiSorter
 {
     public partial class MLModelMusicFiling
     {
@@ -28,25 +28,16 @@ namespace Mp3Mangler
         public static IEstimator<ITransformer> BuildPipeline(MLContext mlContext)
         {
             // Data process configuration with pipeline data transformations
-            var pipeline = mlContext.Transforms.Categorical.OneHotEncoding(new []{new InputOutputColumnPair(@"FirstArtist", @"FirstArtist"),new InputOutputColumnPair(@"FirstAlbumArtist", @"FirstAlbumArtist")})      
-                                    .Append(mlContext.Transforms.Text.FeaturizeText(@"TagTypes", @"TagTypes"))      
+            var pipeline = mlContext.Transforms.Categorical.OneHotEncoding(@"FirstGenre", @"FirstGenre")      
                                     .Append(mlContext.Transforms.Text.FeaturizeText(@"Title", @"Title"))      
                                     .Append(mlContext.Transforms.Text.FeaturizeText(@"Album", @"Album"))      
-                                    .Append(mlContext.Transforms.Text.FeaturizeText(@"Comment", @"Comment"))      
-                                    .Append(mlContext.Transforms.Text.FeaturizeText(@"Year", @"Year"))      
-                                    .Append(mlContext.Transforms.Text.FeaturizeText(@"BeatsPerMinute", @"BeatsPerMinute"))      
-                                    .Append(mlContext.Transforms.Text.FeaturizeText(@"Copyright", @"Copyright"))      
-                                    .Append(mlContext.Transforms.Text.FeaturizeText(@"FirstPerformer", @"FirstPerformer"))      
-                                    .Append(mlContext.Transforms.Text.FeaturizeText(@"FirstGenre", @"FirstGenre"))      
-                                    .Append(mlContext.Transforms.Text.FeaturizeText(@"JoinedArtists", @"JoinedArtists"))      
-                                    .Append(mlContext.Transforms.Text.FeaturizeText(@"JoinedAlbumArtists", @"JoinedAlbumArtists"))      
-                                    .Append(mlContext.Transforms.Text.FeaturizeText(@"JoinedPerformers", @"JoinedPerformers"))      
-                                    .Append(mlContext.Transforms.Text.FeaturizeText(@"JoinedGenres", @"JoinedGenres"))      
-                                    .Append(mlContext.Transforms.Text.FeaturizeText(@"CreateDate", @"CreateDate"))      
-                                    .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"FirstArtist",@"FirstAlbumArtist",@"TagTypes",@"Title",@"Album",@"Comment",@"Year",@"BeatsPerMinute",@"Copyright",@"FirstPerformer",@"FirstGenre",@"JoinedArtists",@"JoinedAlbumArtists",@"JoinedPerformers",@"JoinedGenres",@"CreateDate"}))      
-                                    .Append(mlContext.Transforms.Conversion.MapValueToKey(@"FilePath", @"FilePath"))      
+                                    .Append(mlContext.Transforms.Text.FeaturizeText(@"FirstArtist", @"FirstArtist"))      
+                                    .Append(mlContext.Transforms.Text.FeaturizeText(@"FirstAlbumArtist", @"FirstAlbumArtist"))      
+                                    .Append(mlContext.Transforms.Text.FeaturizeText(@"FileName", @"FileName"))      
+                                    .Append(mlContext.Transforms.Concatenate(@"Features", new []{@"FirstGenre",@"Title",@"Album",@"FirstArtist",@"FirstAlbumArtist",@"FileName"}))      
+                                    .Append(mlContext.Transforms.Conversion.MapValueToKey(@"FolderPath", @"FolderPath"))      
                                     .Append(mlContext.Transforms.NormalizeMinMax(@"Features", @"Features"))      
-                                    .Append(mlContext.MulticlassClassification.Trainers.SdcaMaximumEntropy(l1Regularization:1F,l2Regularization:1F,labelColumnName:@"FilePath",featureColumnName:@"Features"))      
+                                    .Append(mlContext.MulticlassClassification.Trainers.SdcaMaximumEntropy(l1Regularization:0.0596089255001209F,l2Regularization:0.0929966840417537F,labelColumnName:@"FolderPath",featureColumnName:@"Features"))      
                                     .Append(mlContext.Transforms.Conversion.MapKeyToValue(@"PredictedLabel", @"PredictedLabel"));
 
             return pipeline;
