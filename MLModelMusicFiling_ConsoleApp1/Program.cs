@@ -13,20 +13,18 @@ namespace MLModelMusicFiling_ConsoleApp1
             MLModelMusicFiling.ModelInput sampleData = new MLModelMusicFiling.ModelInput()
             {
                 TagTypes = @"Id3v2",
-                Title = @"Aria",
-                Album = @"Melt White",
-                Comment = @"",
-                Year = @"0",
+                Title = @"Some Song Title",
+                Album = @"Greatest Near Misses",
                 BeatsPerMinute = @"0",
-                Copyright = @"",
-                FirstArtist = @"Brass Bed",
-                FirstAlbumArtist = @"Brass Bed",
-                FirstPerformer = @"Brass Bed",
-                FirstGenre = @"Alternative",
-                JoinedArtists = @"Brass Bed",
-                JoinedAlbumArtists = @"Brass Bed",
-                JoinedPerformers = @"Brass Bed",
-                JoinedGenres = @"Alternative; Indie",
+                Copyright = @"1965",
+                FirstArtist = @"Elvis",
+                FirstAlbumArtist = @"Elvis",
+                FirstPerformer = @"Elvis",
+                FirstGenre = @"Rock",
+                JoinedArtists = @"Elvis",
+                JoinedAlbumArtists = @"Elvis",
+                JoinedPerformers = @"Elvis",
+                JoinedGenres = @"Rock; Pop",
                 CreateDate = @"06/01/2021 11:12:52",
             };
 
@@ -36,26 +34,24 @@ namespace MLModelMusicFiling_ConsoleApp1
             Console.WriteLine("Using model to make single prediction -- Comparing actual FilePath with predicted FilePath from sample data...\n\n");
 
 
-            Console.WriteLine($"TagTypes: {@"Id3v2"}");
-            Console.WriteLine($"Title: {@"Aria"}");
-            Console.WriteLine($"Album: {@"Melt White"}");
-            Console.WriteLine($"Comment: {@""}");
-            Console.WriteLine($"Year: {@"0"}");
-            Console.WriteLine($"BeatsPerMinute: {@"0"}");
-            Console.WriteLine($"Copyright: {@""}");
-            Console.WriteLine($"FirstArtist: {@"Brass Bed"}");
-            Console.WriteLine($"FirstAlbumArtist: {@"Brass Bed"}");
-            Console.WriteLine($"FirstPerformer: {@"Brass Bed"}");
-            Console.WriteLine($"FirstGenre: {@"Alternative"}");
-            Console.WriteLine($"JoinedArtists: {@"Brass Bed"}");
-            Console.WriteLine($"JoinedAlbumArtists: {@"Brass Bed"}");
-            Console.WriteLine($"JoinedPerformers: {@"Brass Bed"}");
-            Console.WriteLine($"JoinedGenres: {@"Alternative; Indie"}");
-            Console.WriteLine($"FilePath: {@"E:\temp\MUSIC SORTED\Alternative\Brass Bed\Melt White\Brass Bed - Melt White - Aria.mp3"}");
-            Console.WriteLine($"CreateDate: {@"06/01/2021 11:12:52"}");
+            Console.WriteLine($"TagTypes: {sampleData.TagTypes}");
+            Console.WriteLine($"Title: {sampleData.Title}");
+            Console.WriteLine($"Album: {sampleData.Album}");
+            Console.WriteLine($"BeatsPerMinute: {sampleData.BeatsPerMinute}");
+            Console.WriteLine($"Copyright: {sampleData.Copyright}");
+            Console.WriteLine($"FirstArtist: {sampleData.FirstArtist}");
+            Console.WriteLine($"FirstAlbumArtist: {sampleData.FirstAlbumArtist}");
+            Console.WriteLine($"FirstPerformer: {sampleData.FirstPerformer}");
+            Console.WriteLine($"FirstGenre: {sampleData.FirstGenre}");
+            Console.WriteLine($"JoinedArtists: {sampleData.JoinedArtists}");
+            Console.WriteLine($"JoinedAlbumArtists: {sampleData.JoinedAlbumArtists}");
+            Console.WriteLine($"JoinedPerformers: {sampleData.JoinedPerformers}");
+            Console.WriteLine($"JoinedGenres: {sampleData.JoinedGenres}");
+            Console.WriteLine($"CreateDate: {sampleData.CreateDate}");
+            Console.WriteLine($"FilePath: {@"E:\temp\MUSIC SORTED\Rock\Greatest Near Misses\Elvis\Elvis - Greatest Near Misses - Some Song Title.mp3"}");
 
 
-            Console.WriteLine($"\n\nPredicted FilePath: {predictionResult.Prediction}\n\n");
+            Console.WriteLine($"\n\nPredicted: {predictionResult.Prediction}\n\n");
             Console.WriteLine("=============== End of process, hit any key to finish ===============");
             Console.ReadKey();
         }
