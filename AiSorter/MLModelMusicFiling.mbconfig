@@ -15,7 +15,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "Title",
@@ -23,7 +23,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "TitleSort",
@@ -31,7 +31,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "Album",
@@ -39,7 +39,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "AlbumSort",
@@ -47,7 +47,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "Comment",
@@ -55,7 +55,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "Year",
@@ -63,7 +63,7 @@
         "ColumnDataFormat": "Single",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "Track",
@@ -71,7 +71,7 @@
         "ColumnDataFormat": "Single",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "TrackCount",
@@ -79,7 +79,7 @@
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "Disc",
@@ -87,7 +87,7 @@
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "DiscCount",
@@ -95,7 +95,7 @@
         "ColumnDataFormat": "Single",
         "IsCategorical": true,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "Lyrics",
@@ -103,7 +103,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "Grouping",
@@ -111,7 +111,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "BeatsPerMinute",
@@ -119,7 +119,7 @@
         "ColumnDataFormat": "Single",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "Conductor",
@@ -127,7 +127,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "Copyright",
@@ -135,7 +135,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "MusicBrainzArtistId",
@@ -143,7 +143,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "MusicBrainzReleaseId",
@@ -151,7 +151,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "MusicBrainzReleaseArtistId",
@@ -159,7 +159,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "MusicBrainzTrackId",
@@ -167,7 +167,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "MusicBrainzDiscId",
@@ -175,7 +175,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "MusicIpId",
@@ -183,7 +183,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "AmazonId",
@@ -191,7 +191,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "MusicBrainzReleaseStatus",
@@ -199,7 +199,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "MusicBrainzReleaseType",
@@ -207,7 +207,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "MusicBrainzReleaseCountry",
@@ -215,7 +215,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "FirstArtist",
@@ -223,7 +223,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "FirstAlbumArtist",
@@ -231,7 +231,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "FirstAlbumArtistSort",
@@ -239,7 +239,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "FirstPerformer",
@@ -247,7 +247,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "FirstPerformerSort",
@@ -255,7 +255,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "FirstComposerSort",
@@ -263,7 +263,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "FirstComposer",
@@ -271,7 +271,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "FirstGenre",
@@ -279,7 +279,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": true,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "JoinedArtists",
@@ -287,7 +287,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "JoinedAlbumArtists",
@@ -295,7 +295,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "JoinedPerformers",
@@ -303,7 +303,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "JoinedPerformersSort",
@@ -311,7 +311,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "JoinedComposers",
@@ -319,7 +319,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "JoinedGenres",
@@ -327,7 +327,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "IsEmpty",
@@ -335,7 +335,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "FolderPath",
@@ -343,7 +343,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "FileName",
@@ -351,7 +351,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "FileSize",
@@ -359,7 +359,7 @@
         "ColumnDataFormat": "Single",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       },
       {
         "ColumnName": "CreateDate",
@@ -367,7 +367,7 @@
         "ColumnDataFormat": "String",
         "IsCategorical": false,
         "Type": "Column",
-        "Version": 1
+        "Version": 2
       }
     ]
   },
@@ -375,140 +375,6 @@
     "Type": "LocalCPU",
     "Version": 1
   },
-  "RunHistory": {
-    "Version": 0,
-    "Type": "Result",
-    "Trials": [
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.16666666666666666,
-        "RuntimeInSeconds": 3.1570000648498535
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.33333333333333331,
-        "RuntimeInSeconds": 26.908000946044922
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastTreeOva",
-        "Score": 0.68518518518518523,
-        "RuntimeInSeconds": 18.533000946044922
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.22222222222222221,
-        "RuntimeInSeconds": 2.5659999847412109
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.07407407407407407,
-        "RuntimeInSeconds": 21.625999450683594
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.93939393939393945,
-        "RuntimeInSeconds": 1.9099999666213989
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.88888888888888884,
-        "RuntimeInSeconds": 10.003999710083008
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsMaximumEntropyMulti",
-        "Score": 0.88888888888888884,
-        "RuntimeInSeconds": 13.013999938964844
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastTreeOva",
-        "Score": 0.76666666666666672,
-        "RuntimeInSeconds": 26.430000305175781
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.03896103896103896,
-        "RuntimeInSeconds": 4.314000129699707
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaLogisticRegressionOva",
-        "Score": 0.088607594936708861,
-        "RuntimeInSeconds": 37.318000793457031
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.35185185185185186,
-        "RuntimeInSeconds": 1.5529999732971191
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsLogisticRegressionOva",
-        "Score": 0.68518518518518523,
-        "RuntimeInSeconds": 9.9429998397827148
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LbfgsMaximumEntropyMulti",
-        "Score": 0.92079207920792083,
-        "RuntimeInSeconds": 93.4729995727539
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastTreeOva",
-        "Score": 0.78481012658227844,
-        "RuntimeInSeconds": 39.682998657226562
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "FastForestOva",
-        "Score": 0.33333333333333331,
-        "RuntimeInSeconds": 76.030998229980469
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "LightGbmMulti",
-        "Score": 0.07407407407407407,
-        "RuntimeInSeconds": 3.2160000801086426
-      },
-      {
-        "Version": 0,
-        "Type": "Trial",
-        "TrainerName": "SdcaMaximumEntropyMulti",
-        "Score": 0.9125475285171103,
-        "RuntimeInSeconds": 166.51499938964844
-      }
-    ],
-    "Pipeline": "[{\"EstimatorType\":\"OneHotEncoding\",\"Inputs\":[\"FirstGenre\"],\"Outputs\":[\"FirstGenre\"]},{\"EstimatorType\":\"FeaturizeText\",\"Inputs\":[\"Title\"],\"Outputs\":[\"Title\"]},{\"EstimatorType\":\"FeaturizeText\",\"Inputs\":[\"Album\"],\"Outputs\":[\"Album\"]},{\"EstimatorType\":\"FeaturizeText\",\"Inputs\":[\"FirstArtist\"],\"Outputs\":[\"FirstArtist\"]},{\"EstimatorType\":\"FeaturizeText\",\"Inputs\":[\"FirstAlbumArtist\"],\"Outputs\":[\"FirstAlbumArtist\"]},{\"EstimatorType\":\"FeaturizeText\",\"Inputs\":[\"FileName\"],\"Outputs\":[\"FileName\"]},{\"EstimatorType\":\"Concatenate\",\"Inputs\":[\"FirstGenre\",\"Title\",\"Album\",\"FirstArtist\",\"FirstAlbumArtist\",\"FileName\"],\"Outputs\":[\"Features\"]},{\"EstimatorType\":\"MapValueToKey\",\"Inputs\":[\"FolderPath\"],\"Outputs\":[\"FolderPath\"]},{\"EstimatorType\":\"NormalizeMinMax\",\"Inputs\":[\"Features\"],\"Outputs\":[\"Features\"]},{\"LabelColumnName\":\"FolderPath\",\"FeatureColumnName\":\"Features\",\"L1Regularization\":\"0.0596089255001209\",\"L2Regularization\":\"0.0929966840417537\",\"EstimatorType\":\"SdcaMaximumEntropyMulti\",\"Inputs\":[\"FolderPath\"],\"Outputs\":[\"Features\"]},{\"EstimatorType\":\"MapKeyToValue\",\"Inputs\":[\"PredictedLabel\"],\"Outputs\":[\"PredictedLabel\"]}]",
-    "MetricName": "MicroAccuracy"
-  },
   "Type": "TrainingConfig",
-  "Version": 1
+  "Version": 2
 }
