@@ -1,0 +1,2314 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "net10.0",
+    "targetDisplayName": ".NETCoreApp,Version=v10.0"
+  },
+  "analysisStartTime": "2026-09-27T22:45:08.5414881Z",
+  "analysisEndTime": "2026-09-27T22:45:17.4547375Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 7,
+      "issues": 13,
+      "incidents": 77,
+      "effort": 77
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 22,
+        "Optional": 7,
+        "Potential": 48,
+        "Information": 0
+      },
+      "category": {
+        "NuGet": 28,
+        "Project": 9,
+        "Binding": 10,
+        "Api": 30
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "AiSorter\\AiSorter.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "AiSorter",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.1"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": false,
+        "numberOfFiles": 4,
+        "numberOfCodeFiles": 4,
+        "linesTotal": 266,
+        "linesOfCode": 266,
+        "totalApiScanned": 150,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "309a4e16-f32f-479c-a548-71d2698ecc53",
+          "ruleId": "NuGet.0005",
+          "projectPath": "AiSorter\\AiSorter.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "OpenAI, 1.2.0\n\nRecommendation:\n\nOpenAI SDK package versions prior to v1.3 will not work with the current OpenAI API due to breaking changes with the OpenAI API.  Please update to at least v1.3 of the SDK to restore functionality.\nRemove OpenAI, and replace with new package OpenAI, 2.14.0",
+              "protected": "OpenAI, 1.2.0\n\nRecommendation:\n\nOpenAI SDK package versions prior to v1.3 will not work with the current OpenAI API due to breaking changes with the OpenAI API.  Please update to at least v1.3 of the SDK to restore functionality.\nRemove OpenAI, and replace with new package OpenAI, 2.14.0"
+            },
+            "kind": "File",
+            "path": "AiSorter\\AiSorter.csproj",
+            "snippet": "OpenAI, 1.2.0\n\nRecommendation:\n\nOpenAI SDK package versions prior to v1.3 will not work with the current OpenAI API due to breaking changes with the OpenAI API.  Please update to at least v1.3 of the SDK to restore functionality.\nRemove OpenAI, and replace with new package OpenAI, 2.14.0",
+            "protectedSnippet": "OpenAI, 1.2.0\n\nRecommendation:\n\nOpenAI SDK package versions prior to v1.3 will not work with the current OpenAI API due to breaking changes with the OpenAI API.  Please update to at least v1.3 of the SDK to restore functionality.\nRemove OpenAI, and replace with new package OpenAI, 2.14.0",
+            "label": "OpenAI 1.2.0",
+            "properties": {
+              "PackageId": "OpenAI",
+              "PackageVersion": "1.2.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "FileSorter9000.Core\\FileSorter9000.Core.csproj",
+      "startingProject": true,
+      "issues": 3,
+      "storyPoints": 6,
+      "properties": {
+        "appName": "FileSorter9000.Core",
+        "projectKind": "ClassLibrary",
+        "frameworks": [
+          "netstandard2.1"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": false,
+        "numberOfFiles": 14,
+        "numberOfCodeFiles": 14,
+        "linesTotal": 631,
+        "linesOfCode": 631,
+        "totalApiScanned": 438,
+        "minLinesOfCodeToChange": 3,
+        "maxLinesOfCodeToChange": 3
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "cc8345b6-5e34-4b0e-bba2-080deda9045d",
+          "ruleId": "NuGet.0002",
+          "projectPath": "FileSorter9000.Core\\FileSorter9000.Core.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Newtonsoft.Json, 13.0.1\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+              "protected": "Newtonsoft.Json, 13.0.1\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4"
+            },
+            "kind": "File",
+            "path": "FileSorter9000.Core\\FileSorter9000.Core.csproj",
+            "snippet": "Newtonsoft.Json, 13.0.1\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+            "protectedSnippet": "Newtonsoft.Json, 13.0.1\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+            "label": "Newtonsoft.Json 13.0.1",
+            "properties": {
+              "PackageId": "Newtonsoft.Json",
+              "PackageVersion": "13.0.1",
+              "PackageNewVersion": "13.0.4",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "511cafb6-21c3-47b6-b3e8-dd40271cb8b1",
+          "ruleId": "NuGet.0002",
+          "projectPath": "FileSorter9000.Core\\FileSorter9000.Core.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Configuration.ConfigurationManager, 4.7.0\n\nRecommendation:\n\nRemove System.Configuration.ConfigurationManager, and replace with new package System.Configuration.ConfigurationManager 10.0.12",
+              "protected": "System.Configuration.ConfigurationManager, 4.7.0\n\nRecommendation:\n\nRemove System.Configuration.ConfigurationManager, and replace with new package System.Configuration.ConfigurationManager 10.0.12"
+            },
+            "kind": "File",
+            "path": "FileSorter9000.Core\\FileSorter9000.Core.csproj",
+            "snippet": "System.Configuration.ConfigurationManager, 4.7.0\n\nRecommendation:\n\nRemove System.Configuration.ConfigurationManager, and replace with new package System.Configuration.ConfigurationManager 10.0.12",
+            "protectedSnippet": "System.Configuration.ConfigurationManager, 4.7.0\n\nRecommendation:\n\nRemove System.Configuration.ConfigurationManager, and replace with new package System.Configuration.ConfigurationManager 10.0.12",
+            "label": "System.Configuration.ConfigurationManager 4.7.0",
+            "properties": {
+              "PackageId": "System.Configuration.ConfigurationManager",
+              "PackageVersion": "4.7.0",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "1c21a8a2-3335-4e55-8929-15c72d821afd",
+          "ruleId": "NuGet.0005",
+          "projectPath": "FileSorter9000.Core\\FileSorter9000.Core.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Identity.Client, 4.61.3\n\nRecommendation:\n\nThese packages have an API comment with an URL with a typo, which does not belong to Microsoft and which can lead to typo-squatting. The packages are flagged by antiviruses.\nRemove Microsoft.Identity.Client, and replace with new package Microsoft.Identity.Client, 4.90.1",
+              "protected": "Microsoft.Identity.Client, 4.61.3\n\nRecommendation:\n\nThese packages have an API comment with an URL with a typo, which does not belong to Microsoft and which can lead to typo-squatting. The packages are flagged by antiviruses.\nRemove Microsoft.Identity.Client, and replace with new package Microsoft.Identity.Client, 4.90.1"
+            },
+            "kind": "File",
+            "path": "FileSorter9000.Core\\FileSorter9000.Core.csproj",
+            "snippet": "Microsoft.Identity.Client, 4.61.3\n\nRecommendation:\n\nThese packages have an API comment with an URL with a typo, which does not belong to Microsoft and which can lead to typo-squatting. The packages are flagged by antiviruses.\nRemove Microsoft.Identity.Client, and replace with new package Microsoft.Identity.Client, 4.90.1",
+            "protectedSnippet": "Microsoft.Identity.Client, 4.61.3\n\nRecommendation:\n\nThese packages have an API comment with an URL with a typo, which does not belong to Microsoft and which can lead to typo-squatting. The packages are flagged by antiviruses.\nRemove Microsoft.Identity.Client, and replace with new package Microsoft.Identity.Client, 4.90.1",
+            "label": "Microsoft.Identity.Client 4.61.3",
+            "properties": {
+              "PackageId": "Microsoft.Identity.Client",
+              "PackageVersion": "4.61.3",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "d86cba2a-3682-4b11-ab1f-31b69f4c8ec2",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "FileSorter9000.Core\\FileSorter9000.Core.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "private async Task\u003CHttpContent\u003E GetDataAsync(string url, string accessToken)",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "FileSorter9000.Core\\Services\\MicrosoftGraphService.cs",
+            "snippet": "private async Task\u003CHttpContent\u003E GetDataAsync(string url, string accessToken)",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "properties": {
+              "CharCount": "3254"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 54,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "56ef26ab-29c2-45c3-8227-4eff9bf8efe1",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "FileSorter9000.Core\\FileSorter9000.Core.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "return response.Content;",
+              "protected": "T:System.Net.Http.HttpContent"
+            },
+            "kind": "File",
+            "path": "FileSorter9000.Core\\Services\\MicrosoftGraphService.cs",
+            "snippet": "return response.Content;",
+            "protectedSnippet": "T:System.Net.Http.HttpContent",
+            "label": "T:System.Net.Http.HttpContent",
+            "properties": {
+              "CharCount": "3254"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 66,
+            "column": 24
+          }
+        },
+        {
+          "incidentId": "d986589c-3d33-485e-946c-deb2c6ac6f65",
+          "ruleId": "Api.0003",
+          "description": "Breaking change - Streaming HTTP responses enabled by default in browser HTTP clients ",
+          "projectPath": "FileSorter9000.Core\\FileSorter9000.Core.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var stream = await httpContent.ReadAsStreamAsync();",
+              "protected": "M:System.Net.Http.HttpContent.ReadAsStreamAsync"
+            },
+            "kind": "File",
+            "path": "FileSorter9000.Core\\Services\\MicrosoftGraphService.cs",
+            "snippet": "var stream = await httpContent.ReadAsStreamAsync();",
+            "protectedSnippet": "M:System.Net.Http.HttpContent.ReadAsStreamAsync",
+            "label": "M:System.Net.Http.HttpContent.ReadAsStreamAsync",
+            "properties": {
+              "CharCount": "3254"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/default-http-streaming.md",
+                "isCustom": false
+              }
+            ],
+            "line": 50,
+            "column": 12
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "FileSorter9000\\FileSorter9000.csproj",
+      "startingProject": true,
+      "issues": 8,
+      "storyPoints": 33,
+      "properties": {
+        "appName": "FileSorter9000",
+        "projectKind": "Uwp",
+        "frameworks": [
+          "net5.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": false,
+        "isTestProject": false,
+        "numberOfFiles": 124,
+        "numberOfCodeFiles": 47,
+        "linesTotal": 56307,
+        "linesOfCode": 3177,
+        "totalApiScanned": 3151,
+        "minLinesOfCodeToChange": 24,
+        "maxLinesOfCodeToChange": 24
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "170072d4-b67f-4a1f-80da-cebfd00baf23",
+          "ruleId": "NuGet.0002",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.NETCore.UniversalWindowsPlatform, 6.2.12\n\nRecommendation:\n\nRemove Microsoft.NETCore.UniversalWindowsPlatform, and replace with new package Microsoft.WindowsAppSDK 2.5.1,\nMicrosoft.Graphics.Win2D 1.1.0,\nMicrosoft.Windows.Compatibility 10.0.12",
+              "protected": "Microsoft.NETCore.UniversalWindowsPlatform, 6.2.12\n\nRecommendation:\n\nRemove Microsoft.NETCore.UniversalWindowsPlatform, and replace with new package Microsoft.WindowsAppSDK 2.5.1,\nMicrosoft.Graphics.Win2D 1.1.0,\nMicrosoft.Windows.Compatibility 10.0.12"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\FileSorter9000.csproj",
+            "snippet": "Microsoft.NETCore.UniversalWindowsPlatform, 6.2.12\n\nRecommendation:\n\nRemove Microsoft.NETCore.UniversalWindowsPlatform, and replace with new package Microsoft.WindowsAppSDK 2.5.1,\nMicrosoft.Graphics.Win2D 1.1.0,\nMicrosoft.Windows.Compatibility 10.0.12",
+            "protectedSnippet": "Microsoft.NETCore.UniversalWindowsPlatform, 6.2.12\n\nRecommendation:\n\nRemove Microsoft.NETCore.UniversalWindowsPlatform, and replace with new package Microsoft.WindowsAppSDK 2.5.1,\nMicrosoft.Graphics.Win2D 1.1.0,\nMicrosoft.Windows.Compatibility 10.0.12",
+            "label": "Microsoft.NETCore.UniversalWindowsPlatform 6.2.12",
+            "properties": {
+              "PackageId": "Microsoft.NETCore.UniversalWindowsPlatform",
+              "PackageVersion": "6.2.12",
+              "PackageNewVersion": null,
+              "PackageReplacements": "Replace with new package Microsoft.WindowsAppSDK=2.5.1;Microsoft.Graphics.Win2D=1.1.0;Microsoft.Windows.Compatibility=10.0.12"
+            }
+          }
+        },
+        {
+          "incidentId": "0a183404-0af3-4de0-a0e5-993765c68b7a",
+          "ruleId": "NuGet.0001",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Toolkit.Uwp, 7.0.2\n\nRecommendation:\n\nNo supported version found",
+              "protected": "Microsoft.Toolkit.Uwp, 7.0.2\n\nRecommendation:\n\nNo supported version found"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\FileSorter9000.csproj",
+            "snippet": "Microsoft.Toolkit.Uwp, 7.0.2\n\nRecommendation:\n\nNo supported version found",
+            "protectedSnippet": "Microsoft.Toolkit.Uwp, 7.0.2\n\nRecommendation:\n\nNo supported version found",
+            "label": "Microsoft.Toolkit.Uwp 7.0.2",
+            "properties": {
+              "PackageId": "Microsoft.Toolkit.Uwp",
+              "PackageVersion": "7.0.2",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "8f7df1c0-c6dd-4b89-83f5-089b810d9e27",
+          "ruleId": "NuGet.0001",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Toolkit.Uwp.UI.Animations, 7.0.2\n\nRecommendation:\n\nNo supported version found",
+              "protected": "Microsoft.Toolkit.Uwp.UI.Animations, 7.0.2\n\nRecommendation:\n\nNo supported version found"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\FileSorter9000.csproj",
+            "snippet": "Microsoft.Toolkit.Uwp.UI.Animations, 7.0.2\n\nRecommendation:\n\nNo supported version found",
+            "protectedSnippet": "Microsoft.Toolkit.Uwp.UI.Animations, 7.0.2\n\nRecommendation:\n\nNo supported version found",
+            "label": "Microsoft.Toolkit.Uwp.UI.Animations 7.0.2",
+            "properties": {
+              "PackageId": "Microsoft.Toolkit.Uwp.UI.Animations",
+              "PackageVersion": "7.0.2",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "21144bcf-2be8-4aa5-b75b-d3bd8d2c61ec",
+          "ruleId": "NuGet.0001",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Toolkit.Uwp.UI.Controls, 7.0.2\n\nRecommendation:\n\nNo supported version found",
+              "protected": "Microsoft.Toolkit.Uwp.UI.Controls, 7.0.2\n\nRecommendation:\n\nNo supported version found"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\FileSorter9000.csproj",
+            "snippet": "Microsoft.Toolkit.Uwp.UI.Controls, 7.0.2\n\nRecommendation:\n\nNo supported version found",
+            "protectedSnippet": "Microsoft.Toolkit.Uwp.UI.Controls, 7.0.2\n\nRecommendation:\n\nNo supported version found",
+            "label": "Microsoft.Toolkit.Uwp.UI.Controls 7.0.2",
+            "properties": {
+              "PackageId": "Microsoft.Toolkit.Uwp.UI.Controls",
+              "PackageVersion": "7.0.2",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "97eeba03-31f5-4571-bdda-c81fd451f2cc",
+          "ruleId": "NuGet.0003",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.UI.Xaml, 2.5.0\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+              "protected": "Microsoft.UI.Xaml, 2.5.0\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\FileSorter9000.csproj",
+            "snippet": "Microsoft.UI.Xaml, 2.5.0\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "protectedSnippet": "Microsoft.UI.Xaml, 2.5.0\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "label": "Microsoft.UI.Xaml 2.5.0",
+            "properties": {
+              "PackageId": "Microsoft.UI.Xaml",
+              "PackageVersion": "2.5.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "02a47e19-5652-4bac-bd8f-e3ffc31e1566",
+          "ruleId": "NuGet.0001",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Xaml.Behaviors.Uwp.Managed, 2.0.1\n\nRecommendation:\n\nNo supported version found",
+              "protected": "Microsoft.Xaml.Behaviors.Uwp.Managed, 2.0.1\n\nRecommendation:\n\nNo supported version found"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\FileSorter9000.csproj",
+            "snippet": "Microsoft.Xaml.Behaviors.Uwp.Managed, 2.0.1\n\nRecommendation:\n\nNo supported version found",
+            "protectedSnippet": "Microsoft.Xaml.Behaviors.Uwp.Managed, 2.0.1\n\nRecommendation:\n\nNo supported version found",
+            "label": "Microsoft.Xaml.Behaviors.Uwp.Managed 2.0.1",
+            "properties": {
+              "PackageId": "Microsoft.Xaml.Behaviors.Uwp.Managed",
+              "PackageVersion": "2.0.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "e28a88db-0fd8-453d-8b0b-f0cfe5e42132",
+          "ruleId": "Project.0001",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "File",
+            "path": "FileSorter9000\\FileSorter9000.csproj"
+          }
+        },
+        {
+          "incidentId": "13a1524d-0872-45c5-91a6-7c330bbe706e",
+          "ruleId": "Project.0002",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: .NETCore,Version=v5.0\nRecommended target framework: net10.0-windows10.0.26100.0",
+              "protected": "Current target framework: .NETCore,Version=v5.0\nRecommended target framework: net10.0-windows10.0.26100.0"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\FileSorter9000.csproj",
+            "snippet": "Current target framework: .NETCore,Version=v5.0\nRecommended target framework: net10.0-windows10.0.26100.0",
+            "protectedSnippet": "Current target framework: .NETCore,Version=v5.0\nRecommended target framework: net10.0-windows10.0.26100.0",
+            "properties": {
+              "CurrentTargetFramework": ".NETCore,Version=v5.0",
+              "RecommendedTargetFramework": "net10.0-windows10.0.26100.0"
+            }
+          }
+        },
+        {
+          "incidentId": "5994e89b-f05b-47be-b3f3-c42f778af165",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "ThreadPoolTimer.CreatePeriodicTimer(new TimerElapsedHandler(SampleTimerCallback), TimeSpan.FromSeconds(1));",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\BackgroundTasks\\BackgroundTask1.cs",
+            "snippet": "ThreadPoolTimer.CreatePeriodicTimer(new TimerElapsedHandler(SampleTimerCallback), TimeSpan.FromSeconds(1));",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "properties": {
+              "CharCount": "3924"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 62,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "89cf2a91-2923-4d9f-b076-7689d38e28b6",
+          "ruleId": "Api.0002",
+          "description": "API is available in package System.Runtime.WindowsRuntime, 4.7.0. Add package reference to System.Runtime.WindowsRuntime, 4.7.0",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var item = await folder.TryGetItemAsync(fileName).AsTask().ConfigureAwait(false);",
+              "protected": "T:System.WindowsRuntimeSystemExtensions"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\Helpers\\SettingsStorageExtensions.cs",
+            "snippet": "var item = await folder.TryGetItemAsync(fileName).AsTask().ConfigureAwait(false);",
+            "protectedSnippet": "T:System.WindowsRuntimeSystemExtensions",
+            "label": "T:System.WindowsRuntimeSystemExtensions",
+            "properties": {
+              "PackageId": "System.Runtime.WindowsRuntime",
+              "PackageNewVersion": "4.7.0",
+              "CharCount": "4313"
+            },
+            "line": 84,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "2154ec7f-516c-460b-999c-2dd2013c4d07",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var image = new BitmapImage(new Uri($\u0022ms-appx:///Assets/{fileName}\u0022));",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\Helpers\\ImageHelper.cs",
+            "snippet": "var image = new BitmapImage(new Uri($\u0022ms-appx:///Assets/{fileName}\u0022));",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "properties": {
+              "CharCount": "956"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 27,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "5b5cba4d-d28e-4d25-b8b3-082516b875bb",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var image = new BitmapImage(new Uri($\u0022ms-appx:///Assets/{fileName}\u0022));",
+              "protected": "M:System.Uri.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\Helpers\\ImageHelper.cs",
+            "snippet": "var image = new BitmapImage(new Uri($\u0022ms-appx:///Assets/{fileName}\u0022));",
+            "protectedSnippet": "M:System.Uri.#ctor(System.String)",
+            "label": "M:System.Uri.#ctor(System.String)",
+            "properties": {
+              "CharCount": "956"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 27,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "ede78095-4149-4624-af16-7bb7aa199751",
+          "ruleId": "Api.0002",
+          "description": "API is available in package System.Runtime.WindowsRuntime, 4.7.0. Add package reference to System.Runtime.WindowsRuntime, 4.7.0",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await stream.WriteAsync(byteArray.AsBuffer());",
+              "protected": "T:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeBufferExtensions"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\Helpers\\ImageHelper.cs",
+            "snippet": "await stream.WriteAsync(byteArray.AsBuffer());",
+            "protectedSnippet": "T:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeBufferExtensions",
+            "label": "T:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeBufferExtensions",
+            "properties": {
+              "PackageId": "System.Runtime.WindowsRuntime",
+              "PackageNewVersion": "4.7.0",
+              "CharCount": "956"
+            },
+            "line": 17,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "4f6b17e5-a89d-4a4e-91e0-531595bcee2d",
+          "ruleId": "Api.0002",
+          "description": "API is available in package System.Runtime.WindowsRuntime, 4.7.0. Add package reference to System.Runtime.WindowsRuntime, 4.7.0",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await stream.WriteAsync(byteArray.AsBuffer());",
+              "protected": "M:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeBufferExtensions.AsBuffer(System.Byte[])"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\Helpers\\ImageHelper.cs",
+            "snippet": "await stream.WriteAsync(byteArray.AsBuffer());",
+            "protectedSnippet": "M:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeBufferExtensions.AsBuffer(System.Byte[])",
+            "label": "M:System.Runtime.InteropServices.WindowsRuntime.WindowsRuntimeBufferExtensions.AsBuffer(System.Byte[])",
+            "properties": {
+              "PackageId": "System.Runtime.WindowsRuntime",
+              "PackageNewVersion": "4.7.0",
+              "CharCount": "956"
+            },
+            "line": 17,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "6ac4e91f-a3ba-413a-966e-9f819e15e0ea",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/ImageGalleryPage.xaml\u0022);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\obj\\x64\\Debug\\Views\\ImageGalleryPage.g.i.cs",
+            "snippet": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/ImageGalleryPage.xaml\u0022);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "properties": {
+              "CharCount": "3195"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 37,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "3d4b4a0e-f8d6-4099-952a-9ce86e62dc8f",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/ImageGalleryPage.xaml\u0022);",
+              "protected": "M:System.Uri.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\obj\\x64\\Debug\\Views\\ImageGalleryPage.g.i.cs",
+            "snippet": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/ImageGalleryPage.xaml\u0022);",
+            "protectedSnippet": "M:System.Uri.#ctor(System.String)",
+            "label": "M:System.Uri.#ctor(System.String)",
+            "properties": {
+              "CharCount": "3195"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 37,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "ab1b4ad1-ccc7-4174-b4a9-fcaecfd2f152",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/LogInPage.xaml\u0022);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\obj\\x64\\Debug\\Views\\LogInPage.g.i.cs",
+            "snippet": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/LogInPage.xaml\u0022);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "properties": {
+              "CharCount": "3153"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 37,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "48584ca4-e92d-40d7-9c4b-a03f3a569b63",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/LogInPage.xaml\u0022);",
+              "protected": "M:System.Uri.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\obj\\x64\\Debug\\Views\\LogInPage.g.i.cs",
+            "snippet": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/LogInPage.xaml\u0022);",
+            "protectedSnippet": "M:System.Uri.#ctor(System.String)",
+            "label": "M:System.Uri.#ctor(System.String)",
+            "properties": {
+              "CharCount": "3153"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 37,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "48427936-4ed4-4de5-a24f-d12c6e9502a9",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/FirstRunDialog.xaml\u0022);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\obj\\x64\\Debug\\Views\\FirstRunDialog.g.i.cs",
+            "snippet": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/FirstRunDialog.xaml\u0022);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "properties": {
+              "CharCount": "2997"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 35,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "0e620c79-c60e-4a67-9b90-a3ffc490b524",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/FirstRunDialog.xaml\u0022);",
+              "protected": "M:System.Uri.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\obj\\x64\\Debug\\Views\\FirstRunDialog.g.i.cs",
+            "snippet": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/FirstRunDialog.xaml\u0022);",
+            "protectedSnippet": "M:System.Uri.#ctor(System.String)",
+            "label": "M:System.Uri.#ctor(System.String)",
+            "properties": {
+              "CharCount": "2997"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 35,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "8b293a99-25e2-4d78-8e7c-0809455606d3",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/ImageGalleryDetailPage.xaml\u0022);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\obj\\x64\\Debug\\Views\\ImageGalleryDetailPage.g.i.cs",
+            "snippet": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/ImageGalleryDetailPage.xaml\u0022);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "properties": {
+              "CharCount": "3036"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 35,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "15440aa6-575f-4f1d-a433-5a6964dad522",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/ImageGalleryDetailPage.xaml\u0022);",
+              "protected": "M:System.Uri.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\obj\\x64\\Debug\\Views\\ImageGalleryDetailPage.g.i.cs",
+            "snippet": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/ImageGalleryDetailPage.xaml\u0022);",
+            "protectedSnippet": "M:System.Uri.#ctor(System.String)",
+            "label": "M:System.Uri.#ctor(System.String)",
+            "properties": {
+              "CharCount": "3036"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 35,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "2794c500-e6a9-4488-9659-1edf8e00ee74",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/TreeViewPage.xaml\u0022);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\obj\\x64\\Debug\\Views\\TreeViewPage.g.i.cs",
+            "snippet": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/TreeViewPage.xaml\u0022);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "properties": {
+              "CharCount": "3576"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 41,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "98f2d935-199f-4e38-9384-bd6a5e34f888",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/TreeViewPage.xaml\u0022);",
+              "protected": "M:System.Uri.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\obj\\x64\\Debug\\Views\\TreeViewPage.g.i.cs",
+            "snippet": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/TreeViewPage.xaml\u0022);",
+            "protectedSnippet": "M:System.Uri.#ctor(System.String)",
+            "label": "M:System.Uri.#ctor(System.String)",
+            "properties": {
+              "CharCount": "3576"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 41,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "97fc0a39-2c7f-4ac7-8416-d6e5f57bb1d9",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/MainPage.xaml\u0022);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\obj\\x64\\Debug\\Views\\MainPage.g.i.cs",
+            "snippet": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/MainPage.xaml\u0022);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "properties": {
+              "CharCount": "4316"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 59,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "d55aa4a2-007e-4f65-8129-e6c114cb5542",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/MainPage.xaml\u0022);",
+              "protected": "M:System.Uri.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\obj\\x64\\Debug\\Views\\MainPage.g.i.cs",
+            "snippet": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/MainPage.xaml\u0022);",
+            "protectedSnippet": "M:System.Uri.#ctor(System.String)",
+            "label": "M:System.Uri.#ctor(System.String)",
+            "properties": {
+              "CharCount": "4316"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 59,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "9598fc8f-f5a5-4f7c-bf4b-e5075f40fce3",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/SettingsPage.xaml\u0022);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\obj\\x64\\Debug\\Views\\SettingsPage.g.i.cs",
+            "snippet": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/SettingsPage.xaml\u0022);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "properties": {
+              "CharCount": "3177"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 37,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "b3aa8192-7196-4d1a-910c-a02b241688cf",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/SettingsPage.xaml\u0022);",
+              "protected": "M:System.Uri.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\obj\\x64\\Debug\\Views\\SettingsPage.g.i.cs",
+            "snippet": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/SettingsPage.xaml\u0022);",
+            "protectedSnippet": "M:System.Uri.#ctor(System.String)",
+            "label": "M:System.Uri.#ctor(System.String)",
+            "properties": {
+              "CharCount": "3177"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 37,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "72b1910c-89e2-4de0-8421-7ca0cda3305a",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/ShellPage.xaml\u0022);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\obj\\x64\\Debug\\Views\\ShellPage.g.i.cs",
+            "snippet": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/ShellPage.xaml\u0022);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "properties": {
+              "CharCount": "3566"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 41,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "849fef10-18b9-45cf-adc4-f4754f3f6703",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/ShellPage.xaml\u0022);",
+              "protected": "M:System.Uri.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\obj\\x64\\Debug\\Views\\ShellPage.g.i.cs",
+            "snippet": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/ShellPage.xaml\u0022);",
+            "protectedSnippet": "M:System.Uri.#ctor(System.String)",
+            "label": "M:System.Uri.#ctor(System.String)",
+            "properties": {
+              "CharCount": "3566"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 41,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "00705d83-b8fe-4918-9ca9-02e7379473dd",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/MediaPlayerPage.xaml\u0022);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\obj\\x64\\Debug\\Views\\MediaPlayerPage.g.i.cs",
+            "snippet": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/MediaPlayerPage.xaml\u0022);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "properties": {
+              "CharCount": "3195"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 37,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "13df65f6-dc91-4ee7-884d-94cd5e415916",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/MediaPlayerPage.xaml\u0022);",
+              "protected": "M:System.Uri.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\obj\\x64\\Debug\\Views\\MediaPlayerPage.g.i.cs",
+            "snippet": "global::System.Uri resourceLocator = new global::System.Uri(\u0022ms-appx:///Views/MediaPlayerPage.xaml\u0022);",
+            "protectedSnippet": "M:System.Uri.#ctor(System.String)",
+            "label": "M:System.Uri.#ctor(System.String)",
+            "properties": {
+              "CharCount": "3195"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 37,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "bfbd8b31-2990-42ba-b5d7-e6776f50f8f6",
+          "ruleId": "Binding.0004",
+          "projectPath": "FileSorter9000\\FileSorter9000.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "AutoGenerateBindingRedirects is not set in FileSorter9000.csproj, no manual redirects found",
+              "protected": "AutoGenerateBindingRedirects is not set in FileSorter9000.csproj, no manual redirects found"
+            },
+            "kind": "File",
+            "path": "FileSorter9000\\FileSorter9000.csproj",
+            "snippet": "AutoGenerateBindingRedirects is not set in FileSorter9000.csproj, no manual redirects found",
+            "protectedSnippet": "AutoGenerateBindingRedirects is not set in FileSorter9000.csproj, no manual redirects found"
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "FileSorter9000.Tests.WinAppDriver\\FileSorter9000.Tests.WinAppDriver.csproj",
+      "startingProject": true,
+      "issues": 6,
+      "storyPoints": 8,
+      "properties": {
+        "appName": "FileSorter9000.Tests.WinAppDriver",
+        "projectKind": "ClassicClassLibrary",
+        "frameworks": [
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": false,
+        "isTestProject": true,
+        "numberOfFiles": 2,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 100,
+        "linesOfCode": 100,
+        "totalApiScanned": 105,
+        "minLinesOfCodeToChange": 3,
+        "maxLinesOfCodeToChange": 3
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "53c9e30c-88fc-443c-b0af-69fc636fea05",
+          "ruleId": "NuGet.0005",
+          "projectPath": "FileSorter9000.Tests.WinAppDriver\\FileSorter9000.Tests.WinAppDriver.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "MSTest.TestAdapter, 2.2.4\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestAdapter, and replace with new package MSTest.TestAdapter, 4.4.1",
+              "protected": "MSTest.TestAdapter, 2.2.4\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestAdapter, and replace with new package MSTest.TestAdapter, 4.4.1"
+            },
+            "kind": "File",
+            "path": "FileSorter9000.Tests.WinAppDriver\\FileSorter9000.Tests.WinAppDriver.csproj",
+            "snippet": "MSTest.TestAdapter, 2.2.4\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestAdapter, and replace with new package MSTest.TestAdapter, 4.4.1",
+            "protectedSnippet": "MSTest.TestAdapter, 2.2.4\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestAdapter, and replace with new package MSTest.TestAdapter, 4.4.1",
+            "label": "MSTest.TestAdapter 2.2.4",
+            "properties": {
+              "PackageId": "MSTest.TestAdapter",
+              "PackageVersion": "2.2.4",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "eaf6324a-dc32-4905-a0b1-3d69425b4e3e",
+          "ruleId": "NuGet.0005",
+          "projectPath": "FileSorter9000.Tests.WinAppDriver\\FileSorter9000.Tests.WinAppDriver.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "MSTest.TestFramework, 2.2.4\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestFramework, and replace with new package MSTest.TestFramework, 4.4.1",
+              "protected": "MSTest.TestFramework, 2.2.4\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestFramework, and replace with new package MSTest.TestFramework, 4.4.1"
+            },
+            "kind": "File",
+            "path": "FileSorter9000.Tests.WinAppDriver\\FileSorter9000.Tests.WinAppDriver.csproj",
+            "snippet": "MSTest.TestFramework, 2.2.4\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestFramework, and replace with new package MSTest.TestFramework, 4.4.1",
+            "protectedSnippet": "MSTest.TestFramework, 2.2.4\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestFramework, and replace with new package MSTest.TestFramework, 4.4.1",
+            "label": "MSTest.TestFramework 2.2.4",
+            "properties": {
+              "PackageId": "MSTest.TestFramework",
+              "PackageVersion": "2.2.4",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "bdf27ce6-c71f-4d52-9d8c-bd97fd56cfa9",
+          "ruleId": "Project.0001",
+          "projectPath": "FileSorter9000.Tests.WinAppDriver\\FileSorter9000.Tests.WinAppDriver.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "File",
+            "path": "FileSorter9000.Tests.WinAppDriver\\FileSorter9000.Tests.WinAppDriver.csproj"
+          }
+        },
+        {
+          "incidentId": "db6bd481-aa57-48e3-a13a-2cf466330b91",
+          "ruleId": "Project.0002",
+          "projectPath": "FileSorter9000.Tests.WinAppDriver\\FileSorter9000.Tests.WinAppDriver.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: .NETFramework,Version=v4.8.1\nRecommended target framework: net10.0",
+              "protected": "Current target framework: .NETFramework,Version=v4.8.1\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "FileSorter9000.Tests.WinAppDriver\\FileSorter9000.Tests.WinAppDriver.csproj",
+            "snippet": "Current target framework: .NETFramework,Version=v4.8.1\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: .NETFramework,Version=v4.8.1\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": ".NETFramework,Version=v4.8.1",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "8bc296b4-2a59-4dff-9896-cb03b782f3ea",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "FileSorter9000.Tests.WinAppDriver\\FileSorter9000.Tests.WinAppDriver.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "AppSession.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(4);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "FileSorter9000.Tests.WinAppDriver\\BasicTests.cs",
+            "snippet": "AppSession.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(4);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "properties": {
+              "CharCount": "3050"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 51,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "07165e43-a9b3-43b3-a79e-f958dbee0401",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "FileSorter9000.Tests.WinAppDriver\\FileSorter9000.Tests.WinAppDriver.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "AppSession = new WindowsDriver\u003CWindowsElement\u003E(new Uri(WindowsApplicationDriverUrl), appiumOptions);",
+              "protected": "T:System.Uri"
+            },
+            "kind": "File",
+            "path": "FileSorter9000.Tests.WinAppDriver\\BasicTests.cs",
+            "snippet": "AppSession = new WindowsDriver\u003CWindowsElement\u003E(new Uri(WindowsApplicationDriverUrl), appiumOptions);",
+            "protectedSnippet": "T:System.Uri",
+            "label": "T:System.Uri",
+            "properties": {
+              "CharCount": "3050"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 47,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "de3468ea-0d17-412f-9b1f-dd7e9b707c35",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: URI length limits removed ",
+          "projectPath": "FileSorter9000.Tests.WinAppDriver\\FileSorter9000.Tests.WinAppDriver.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "AppSession = new WindowsDriver\u003CWindowsElement\u003E(new Uri(WindowsApplicationDriverUrl), appiumOptions);",
+              "protected": "M:System.Uri.#ctor(System.String)"
+            },
+            "kind": "File",
+            "path": "FileSorter9000.Tests.WinAppDriver\\BasicTests.cs",
+            "snippet": "AppSession = new WindowsDriver\u003CWindowsElement\u003E(new Uri(WindowsApplicationDriverUrl), appiumOptions);",
+            "protectedSnippet": "M:System.Uri.#ctor(System.String)",
+            "label": "M:System.Uri.#ctor(System.String)",
+            "properties": {
+              "CharCount": "3050"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/networking/10.0/uri-length-limits-removed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 47,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "22f87770-a877-4669-9646-2ab83c7c5716",
+          "ruleId": "Binding.0003",
+          "projectPath": "FileSorter9000.Tests.WinAppDriver\\FileSorter9000.Tests.WinAppDriver.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "OutputType=Library with test framework references, GenerateBindingRedirectsOutputType not set",
+              "protected": "OutputType=Library with test framework references, GenerateBindingRedirectsOutputType not set"
+            },
+            "kind": "File",
+            "path": "FileSorter9000.Tests.WinAppDriver\\FileSorter9000.Tests.WinAppDriver.csproj",
+            "snippet": "OutputType=Library with test framework references, GenerateBindingRedirectsOutputType not set",
+            "protectedSnippet": "OutputType=Library with test framework references, GenerateBindingRedirectsOutputType not set"
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "MLModelMusicFiling_ConsoleApp1\\MLModelMusicFiling_ConsoleApp1.csproj",
+      "startingProject": true,
+      "issues": 1,
+      "storyPoints": 1,
+      "properties": {
+        "appName": "MLModelMusicFiling_ConsoleApp1",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": false,
+        "numberOfFiles": 3,
+        "numberOfCodeFiles": 3,
+        "linesTotal": 304,
+        "linesOfCode": 304,
+        "totalApiScanned": 315,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "3f3263fd-f3e0-4cb1-868b-632a178d8ae8",
+          "ruleId": "Project.0002",
+          "projectPath": "MLModelMusicFiling_ConsoleApp1\\MLModelMusicFiling_ConsoleApp1.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "MLModelMusicFiling_ConsoleApp1\\MLModelMusicFiling_ConsoleApp1.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "Mp3Mangler\\Mp3Mangler.csproj",
+      "startingProject": true,
+      "issues": 8,
+      "storyPoints": 23,
+      "properties": {
+        "appName": "Mp3Mangler",
+        "projectKind": "ClassicDotNetApp",
+        "frameworks": [
+          "net481"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": false,
+        "isTestProject": false,
+        "numberOfFiles": 8,
+        "numberOfCodeFiles": 8,
+        "linesTotal": 807,
+        "linesOfCode": 807,
+        "totalApiScanned": 777,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "0ec2144c-3ac3-49c8-9631-7f25bf4048b9",
+          "ruleId": "NuGet.0002",
+          "projectPath": "Mp3Mangler\\Mp3Mangler.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Bcl.AsyncInterfaces, 1.0.0\n\nRecommendation:\n\nRemove Microsoft.Bcl.AsyncInterfaces, and replace with new package Microsoft.Bcl.AsyncInterfaces 10.0.12",
+              "protected": "Microsoft.Bcl.AsyncInterfaces, 1.0.0\n\nRecommendation:\n\nRemove Microsoft.Bcl.AsyncInterfaces, and replace with new package Microsoft.Bcl.AsyncInterfaces 10.0.12"
+            },
+            "kind": "File",
+            "path": "Mp3Mangler\\Mp3Mangler.csproj",
+            "snippet": "Microsoft.Bcl.AsyncInterfaces, 1.0.0\n\nRecommendation:\n\nRemove Microsoft.Bcl.AsyncInterfaces, and replace with new package Microsoft.Bcl.AsyncInterfaces 10.0.12",
+            "protectedSnippet": "Microsoft.Bcl.AsyncInterfaces, 1.0.0\n\nRecommendation:\n\nRemove Microsoft.Bcl.AsyncInterfaces, and replace with new package Microsoft.Bcl.AsyncInterfaces 10.0.12",
+            "label": "Microsoft.Bcl.AsyncInterfaces 1.0.0",
+            "properties": {
+              "PackageId": "Microsoft.Bcl.AsyncInterfaces",
+              "PackageVersion": "1.0.0",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "d89ad12e-6ab9-4959-a6cb-c83f16aef205",
+          "ruleId": "NuGet.0002",
+          "projectPath": "Mp3Mangler\\Mp3Mangler.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Bcl.HashCode, 1.0.0\n\nRecommendation:\n\nRemove Microsoft.Bcl.HashCode, and replace with new package Microsoft.Bcl.HashCode 6.0.0",
+              "protected": "Microsoft.Bcl.HashCode, 1.0.0\n\nRecommendation:\n\nRemove Microsoft.Bcl.HashCode, and replace with new package Microsoft.Bcl.HashCode 6.0.0"
+            },
+            "kind": "File",
+            "path": "Mp3Mangler\\Mp3Mangler.csproj",
+            "snippet": "Microsoft.Bcl.HashCode, 1.0.0\n\nRecommendation:\n\nRemove Microsoft.Bcl.HashCode, and replace with new package Microsoft.Bcl.HashCode 6.0.0",
+            "protectedSnippet": "Microsoft.Bcl.HashCode, 1.0.0\n\nRecommendation:\n\nRemove Microsoft.Bcl.HashCode, and replace with new package Microsoft.Bcl.HashCode 6.0.0",
+            "label": "Microsoft.Bcl.HashCode 1.0.0",
+            "properties": {
+              "PackageId": "Microsoft.Bcl.HashCode",
+              "PackageVersion": "1.0.0",
+              "PackageNewVersion": "6.0.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "39b16989-49f1-4fae-9fd9-3e3c8e8b2c3f",
+          "ruleId": "NuGet.0002",
+          "projectPath": "Mp3Mangler\\Mp3Mangler.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.CSharp, 4.3.0\n\nRecommendation:\n\nRemove Microsoft.CSharp, and replace with new package Microsoft.CSharp 4.7.0",
+              "protected": "Microsoft.CSharp, 4.3.0\n\nRecommendation:\n\nRemove Microsoft.CSharp, and replace with new package Microsoft.CSharp 4.7.0"
+            },
+            "kind": "File",
+            "path": "Mp3Mangler\\Mp3Mangler.csproj",
+            "snippet": "Microsoft.CSharp, 4.3.0\n\nRecommendation:\n\nRemove Microsoft.CSharp, and replace with new package Microsoft.CSharp 4.7.0",
+            "protectedSnippet": "Microsoft.CSharp, 4.3.0\n\nRecommendation:\n\nRemove Microsoft.CSharp, and replace with new package Microsoft.CSharp 4.7.0",
+            "label": "Microsoft.CSharp 4.3.0",
+            "properties": {
+              "PackageId": "Microsoft.CSharp",
+              "PackageVersion": "4.3.0",
+              "PackageNewVersion": "4.7.0",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "094ce682-74f0-475c-ac09-12c5b247292b",
+          "ruleId": "NuGet.0002",
+          "projectPath": "Mp3Mangler\\Mp3Mangler.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Newtonsoft.Json, 13.0.1\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+              "protected": "Newtonsoft.Json, 13.0.1\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4"
+            },
+            "kind": "File",
+            "path": "Mp3Mangler\\Mp3Mangler.csproj",
+            "snippet": "Newtonsoft.Json, 13.0.1\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+            "protectedSnippet": "Newtonsoft.Json, 13.0.1\n\nRecommendation:\n\nRemove Newtonsoft.Json, and replace with new package Newtonsoft.Json 13.0.4",
+            "label": "Newtonsoft.Json 13.0.1",
+            "properties": {
+              "PackageId": "Newtonsoft.Json",
+              "PackageVersion": "13.0.1",
+              "PackageNewVersion": "13.0.4",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "d80eeb3d-d370-4717-8f34-3f6b2c5a4781",
+          "ruleId": "NuGet.0003",
+          "projectPath": "Mp3Mangler\\Mp3Mangler.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Buffers, 4.4.0\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+              "protected": "System.Buffers, 4.4.0\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+            },
+            "kind": "File",
+            "path": "Mp3Mangler\\Mp3Mangler.csproj",
+            "snippet": "System.Buffers, 4.4.0\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "protectedSnippet": "System.Buffers, 4.4.0\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "label": "System.Buffers 4.4.0",
+            "properties": {
+              "PackageId": "System.Buffers",
+              "PackageVersion": "4.4.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "8f3fd5cb-8496-4e3e-b786-344a701f95c2",
+          "ruleId": "NuGet.0002",
+          "projectPath": "Mp3Mangler\\Mp3Mangler.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.CodeDom, 4.4.0\n\nRecommendation:\n\nRemove System.CodeDom, and replace with new package System.CodeDom 10.0.12",
+              "protected": "System.CodeDom, 4.4.0\n\nRecommendation:\n\nRemove System.CodeDom, and replace with new package System.CodeDom 10.0.12"
+            },
+            "kind": "File",
+            "path": "Mp3Mangler\\Mp3Mangler.csproj",
+            "snippet": "System.CodeDom, 4.4.0\n\nRecommendation:\n\nRemove System.CodeDom, and replace with new package System.CodeDom 10.0.12",
+            "protectedSnippet": "System.CodeDom, 4.4.0\n\nRecommendation:\n\nRemove System.CodeDom, and replace with new package System.CodeDom 10.0.12",
+            "label": "System.CodeDom 4.4.0",
+            "properties": {
+              "PackageId": "System.CodeDom",
+              "PackageVersion": "4.4.0",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "8e9e8f91-2b86-4602-b06f-15fac2813d55",
+          "ruleId": "NuGet.0002",
+          "projectPath": "Mp3Mangler\\Mp3Mangler.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Collections.Immutable, 1.5.0\n\nRecommendation:\n\nRemove System.Collections.Immutable, and replace with new package System.Collections.Immutable 10.0.12",
+              "protected": "System.Collections.Immutable, 1.5.0\n\nRecommendation:\n\nRemove System.Collections.Immutable, and replace with new package System.Collections.Immutable 10.0.12"
+            },
+            "kind": "File",
+            "path": "Mp3Mangler\\Mp3Mangler.csproj",
+            "snippet": "System.Collections.Immutable, 1.5.0\n\nRecommendation:\n\nRemove System.Collections.Immutable, and replace with new package System.Collections.Immutable 10.0.12",
+            "protectedSnippet": "System.Collections.Immutable, 1.5.0\n\nRecommendation:\n\nRemove System.Collections.Immutable, and replace with new package System.Collections.Immutable 10.0.12",
+            "label": "System.Collections.Immutable 1.5.0",
+            "properties": {
+              "PackageId": "System.Collections.Immutable",
+              "PackageVersion": "1.5.0",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "a87146be-f260-4a63-8af6-2daae7433309",
+          "ruleId": "NuGet.0003",
+          "projectPath": "Mp3Mangler\\Mp3Mangler.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Memory, 4.5.3\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+              "protected": "System.Memory, 4.5.3\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+            },
+            "kind": "File",
+            "path": "Mp3Mangler\\Mp3Mangler.csproj",
+            "snippet": "System.Memory, 4.5.3\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "protectedSnippet": "System.Memory, 4.5.3\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "label": "System.Memory 4.5.3",
+            "properties": {
+              "PackageId": "System.Memory",
+              "PackageVersion": "4.5.3",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "dd590fd9-948c-41e1-930b-93811633b461",
+          "ruleId": "NuGet.0003",
+          "projectPath": "Mp3Mangler\\Mp3Mangler.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Numerics.Vectors, 4.4.0\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+              "protected": "System.Numerics.Vectors, 4.4.0\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+            },
+            "kind": "File",
+            "path": "Mp3Mangler\\Mp3Mangler.csproj",
+            "snippet": "System.Numerics.Vectors, 4.4.0\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "protectedSnippet": "System.Numerics.Vectors, 4.4.0\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "label": "System.Numerics.Vectors 4.4.0",
+            "properties": {
+              "PackageId": "System.Numerics.Vectors",
+              "PackageVersion": "4.4.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "4d418512-eb6c-43cd-8a08-fce80b2d405a",
+          "ruleId": "NuGet.0003",
+          "projectPath": "Mp3Mangler\\Mp3Mangler.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Reflection.Emit.Lightweight, 4.3.0\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+              "protected": "System.Reflection.Emit.Lightweight, 4.3.0\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+            },
+            "kind": "File",
+            "path": "Mp3Mangler\\Mp3Mangler.csproj",
+            "snippet": "System.Reflection.Emit.Lightweight, 4.3.0\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "protectedSnippet": "System.Reflection.Emit.Lightweight, 4.3.0\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "label": "System.Reflection.Emit.Lightweight 4.3.0",
+            "properties": {
+              "PackageId": "System.Reflection.Emit.Lightweight",
+              "PackageVersion": "4.3.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "2c4831bd-702b-44a5-bc16-aba88b73d998",
+          "ruleId": "NuGet.0002",
+          "projectPath": "Mp3Mangler\\Mp3Mangler.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Runtime.CompilerServices.Unsafe, 4.5.3\n\nRecommendation:\n\nRemove System.Runtime.CompilerServices.Unsafe, and replace with new package System.Runtime.CompilerServices.Unsafe 6.1.2",
+              "protected": "System.Runtime.CompilerServices.Unsafe, 4.5.3\n\nRecommendation:\n\nRemove System.Runtime.CompilerServices.Unsafe, and replace with new package System.Runtime.CompilerServices.Unsafe 6.1.2"
+            },
+            "kind": "File",
+            "path": "Mp3Mangler\\Mp3Mangler.csproj",
+            "snippet": "System.Runtime.CompilerServices.Unsafe, 4.5.3\n\nRecommendation:\n\nRemove System.Runtime.CompilerServices.Unsafe, and replace with new package System.Runtime.CompilerServices.Unsafe 6.1.2",
+            "protectedSnippet": "System.Runtime.CompilerServices.Unsafe, 4.5.3\n\nRecommendation:\n\nRemove System.Runtime.CompilerServices.Unsafe, and replace with new package System.Runtime.CompilerServices.Unsafe 6.1.2",
+            "label": "System.Runtime.CompilerServices.Unsafe 4.5.3",
+            "properties": {
+              "PackageId": "System.Runtime.CompilerServices.Unsafe",
+              "PackageVersion": "4.5.3",
+              "PackageNewVersion": "6.1.2",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "cf29b646-0082-4d29-8f5d-3927a16e1852",
+          "ruleId": "NuGet.0002",
+          "projectPath": "Mp3Mangler\\Mp3Mangler.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Threading.Channels, 4.7.1\n\nRecommendation:\n\nRemove System.Threading.Channels, and replace with new package System.Threading.Channels 10.0.12",
+              "protected": "System.Threading.Channels, 4.7.1\n\nRecommendation:\n\nRemove System.Threading.Channels, and replace with new package System.Threading.Channels 10.0.12"
+            },
+            "kind": "File",
+            "path": "Mp3Mangler\\Mp3Mangler.csproj",
+            "snippet": "System.Threading.Channels, 4.7.1\n\nRecommendation:\n\nRemove System.Threading.Channels, and replace with new package System.Threading.Channels 10.0.12",
+            "protectedSnippet": "System.Threading.Channels, 4.7.1\n\nRecommendation:\n\nRemove System.Threading.Channels, and replace with new package System.Threading.Channels 10.0.12",
+            "label": "System.Threading.Channels 4.7.1",
+            "properties": {
+              "PackageId": "System.Threading.Channels",
+              "PackageVersion": "4.7.1",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "12e45f8a-2061-4d33-a8b4-b0b38bcaed86",
+          "ruleId": "NuGet.0003",
+          "projectPath": "Mp3Mangler\\Mp3Mangler.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Threading.Tasks.Extensions, 4.5.4\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+              "protected": "System.Threading.Tasks.Extensions, 4.5.4\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+            },
+            "kind": "File",
+            "path": "Mp3Mangler\\Mp3Mangler.csproj",
+            "snippet": "System.Threading.Tasks.Extensions, 4.5.4\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "protectedSnippet": "System.Threading.Tasks.Extensions, 4.5.4\n\nRecommendation:\n\nPackage functionality included with new framework reference",
+            "label": "System.Threading.Tasks.Extensions 4.5.4",
+            "properties": {
+              "PackageId": "System.Threading.Tasks.Extensions",
+              "PackageVersion": "4.5.4",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "19050355-74cf-497c-8f72-7054f67f119d",
+          "ruleId": "NuGet.0005",
+          "projectPath": "Mp3Mangler\\Mp3Mangler.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "System.Collections.Immutable, 1.5.0\n\nRecommendation:\n\nVersions targeting out-of-support .NET versions\nRemove System.Collections.Immutable, and replace with new package System.Collections.Immutable, 10.0.12",
+              "protected": "System.Collections.Immutable, 1.5.0\n\nRecommendation:\n\nVersions targeting out-of-support .NET versions\nRemove System.Collections.Immutable, and replace with new package System.Collections.Immutable, 10.0.12"
+            },
+            "kind": "File",
+            "path": "Mp3Mangler\\Mp3Mangler.csproj",
+            "snippet": "System.Collections.Immutable, 1.5.0\n\nRecommendation:\n\nVersions targeting out-of-support .NET versions\nRemove System.Collections.Immutable, and replace with new package System.Collections.Immutable, 10.0.12",
+            "protectedSnippet": "System.Collections.Immutable, 1.5.0\n\nRecommendation:\n\nVersions targeting out-of-support .NET versions\nRemove System.Collections.Immutable, and replace with new package System.Collections.Immutable, 10.0.12",
+            "label": "System.Collections.Immutable 1.5.0",
+            "properties": {
+              "PackageId": "System.Collections.Immutable",
+              "PackageVersion": "1.5.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "829fc068-8cdb-4a7b-8a10-ab5254eae889",
+          "ruleId": "Project.0001",
+          "projectPath": "Mp3Mangler\\Mp3Mangler.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "File",
+            "path": "Mp3Mangler\\Mp3Mangler.csproj"
+          }
+        },
+        {
+          "incidentId": "71b65102-2b67-4f81-a477-a9b207cdf52d",
+          "ruleId": "Project.0002",
+          "projectPath": "Mp3Mangler\\Mp3Mangler.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: .NETFramework,Version=v4.8.1\nRecommended target framework: net10.0",
+              "protected": "Current target framework: .NETFramework,Version=v4.8.1\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "Mp3Mangler\\Mp3Mangler.csproj",
+            "snippet": "Current target framework: .NETFramework,Version=v4.8.1\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: .NETFramework,Version=v4.8.1\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": ".NETFramework,Version=v4.8.1",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "894c77b1-f514-4c34-9d7d-357676c5c882",
+          "ruleId": "Binding.0005",
+          "projectPath": "Mp3Mangler\\Mp3Mangler.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Manual redirects exist but none covers Microsoft.CSharp (referenced v4.0.0.0, package v4.3.0)",
+              "protected": "Manual redirects exist but none covers Microsoft.CSharp (referenced v4.0.0.0, package v4.3.0)"
+            },
+            "kind": "File",
+            "path": "Mp3Mangler\\App.config",
+            "snippet": "Manual redirects exist but none covers Microsoft.CSharp (referenced v4.0.0.0, package v4.3.0)",
+            "protectedSnippet": "Manual redirects exist but none covers Microsoft.CSharp (referenced v4.0.0.0, package v4.3.0)",
+            "properties": {
+              "AssemblyName": "Microsoft.CSharp",
+              "AssemblyCurrentVersion": "4.0.0.0",
+              "AssemblyNewVersion": "4.3.0"
+            }
+          }
+        },
+        {
+          "incidentId": "6ef10296-335b-4a21-af3f-d4fe18606f39",
+          "ruleId": "Binding.0006",
+          "projectPath": "Mp3Mangler\\Mp3Mangler.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Manual redirect for System.Runtime.CompilerServices.Unsafe targets 4.0.4.1 but auto-generation would target 4.5.3 (MSB3836 conflict)",
+              "protected": "Manual redirect for System.Runtime.CompilerServices.Unsafe targets 4.0.4.1 but auto-generation would target 4.5.3 (MSB3836 conflict)"
+            },
+            "kind": "File",
+            "path": "Mp3Mangler\\App.config",
+            "snippet": "Manual redirect for System.Runtime.CompilerServices.Unsafe targets 4.0.4.1 but auto-generation would target 4.5.3 (MSB3836 conflict)",
+            "protectedSnippet": "Manual redirect for System.Runtime.CompilerServices.Unsafe targets 4.0.4.1 but auto-generation would target 4.5.3 (MSB3836 conflict)",
+            "properties": {
+              "AssemblyName": "System.Runtime.CompilerServices.Unsafe",
+              "AssemblyCurrentVersion": "4.0.4.1",
+              "AssemblyNewVersion": "4.5.3"
+            }
+          }
+        },
+        {
+          "incidentId": "011fa5d9-a7d4-4f22-a619-8770ae1a8832",
+          "ruleId": "Binding.0006",
+          "projectPath": "Mp3Mangler\\Mp3Mangler.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Manual redirect for System.Threading.Tasks.Extensions targets 4.2.0.1 but auto-generation would target 4.5.4 (MSB3836 conflict)",
+              "protected": "Manual redirect for System.Threading.Tasks.Extensions targets 4.2.0.1 but auto-generation would target 4.5.4 (MSB3836 conflict)"
+            },
+            "kind": "File",
+            "path": "Mp3Mangler\\App.config",
+            "snippet": "Manual redirect for System.Threading.Tasks.Extensions targets 4.2.0.1 but auto-generation would target 4.5.4 (MSB3836 conflict)",
+            "protectedSnippet": "Manual redirect for System.Threading.Tasks.Extensions targets 4.2.0.1 but auto-generation would target 4.5.4 (MSB3836 conflict)",
+            "properties": {
+              "AssemblyName": "System.Threading.Tasks.Extensions",
+              "AssemblyCurrentVersion": "4.2.0.1",
+              "AssemblyNewVersion": "4.5.4"
+            }
+          }
+        },
+        {
+          "incidentId": "42a4096d-8760-402c-8db8-9f2ff2973d4c",
+          "ruleId": "Binding.0006",
+          "projectPath": "Mp3Mangler\\Mp3Mangler.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Manual redirect for System.Memory targets 4.0.1.1 but auto-generation would target 4.5.3 (MSB3836 conflict)",
+              "protected": "Manual redirect for System.Memory targets 4.0.1.1 but auto-generation would target 4.5.3 (MSB3836 conflict)"
+            },
+            "kind": "File",
+            "path": "Mp3Mangler\\App.config",
+            "snippet": "Manual redirect for System.Memory targets 4.0.1.1 but auto-generation would target 4.5.3 (MSB3836 conflict)",
+            "protectedSnippet": "Manual redirect for System.Memory targets 4.0.1.1 but auto-generation would target 4.5.3 (MSB3836 conflict)",
+            "properties": {
+              "AssemblyName": "System.Memory",
+              "AssemblyCurrentVersion": "4.0.1.1",
+              "AssemblyNewVersion": "4.5.3"
+            }
+          }
+        },
+        {
+          "incidentId": "7ef9ead6-bd60-4a3e-a6e9-5a9577f8aecd",
+          "ruleId": "Binding.0007",
+          "projectPath": "Mp3Mangler\\Mp3Mangler.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Binding redirect for System.Memory targets 4.0.1.1 but package provides 4.5.3",
+              "protected": "Binding redirect for System.Memory targets 4.0.1.1 but package provides 4.5.3"
+            },
+            "kind": "File",
+            "path": "Mp3Mangler\\App.config",
+            "snippet": "Binding redirect for System.Memory targets 4.0.1.1 but package provides 4.5.3",
+            "protectedSnippet": "Binding redirect for System.Memory targets 4.0.1.1 but package provides 4.5.3",
+            "properties": {
+              "AssemblyName": "System.Memory",
+              "AssemblyCurrentVersion": "4.0.1.1",
+              "AssemblyNewVersion": "4.5.3"
+            }
+          }
+        },
+        {
+          "incidentId": "41058fe4-b5b8-4bc4-a56a-78ff618a6d23",
+          "ruleId": "Binding.0007",
+          "projectPath": "Mp3Mangler\\Mp3Mangler.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Binding redirect for System.Runtime.CompilerServices.Unsafe targets 4.0.4.1 but package provides 4.5.3",
+              "protected": "Binding redirect for System.Runtime.CompilerServices.Unsafe targets 4.0.4.1 but package provides 4.5.3"
+            },
+            "kind": "File",
+            "path": "Mp3Mangler\\App.config",
+            "snippet": "Binding redirect for System.Runtime.CompilerServices.Unsafe targets 4.0.4.1 but package provides 4.5.3",
+            "protectedSnippet": "Binding redirect for System.Runtime.CompilerServices.Unsafe targets 4.0.4.1 but package provides 4.5.3",
+            "properties": {
+              "AssemblyName": "System.Runtime.CompilerServices.Unsafe",
+              "AssemblyCurrentVersion": "4.0.4.1",
+              "AssemblyNewVersion": "4.5.3"
+            }
+          }
+        },
+        {
+          "incidentId": "1e082dcd-f475-458a-839d-3e9135443f12",
+          "ruleId": "Binding.0007",
+          "projectPath": "Mp3Mangler\\Mp3Mangler.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Binding redirect for System.Threading.Tasks.Extensions targets 4.2.0.1 but package provides 4.5.4",
+              "protected": "Binding redirect for System.Threading.Tasks.Extensions targets 4.2.0.1 but package provides 4.5.4"
+            },
+            "kind": "File",
+            "path": "Mp3Mangler\\App.config",
+            "snippet": "Binding redirect for System.Threading.Tasks.Extensions targets 4.2.0.1 but package provides 4.5.4",
+            "protectedSnippet": "Binding redirect for System.Threading.Tasks.Extensions targets 4.2.0.1 but package provides 4.5.4",
+            "properties": {
+              "AssemblyName": "System.Threading.Tasks.Extensions",
+              "AssemblyCurrentVersion": "4.2.0.1",
+              "AssemblyNewVersion": "4.5.4"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "Mp3ManglerTest\\Mp3ManglerTest.csproj",
+      "startingProject": true,
+      "issues": 4,
+      "storyPoints": 5,
+      "properties": {
+        "appName": "Mp3ManglerTest",
+        "projectKind": "ClassicClassLibrary",
+        "frameworks": [
+          "net48"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": false,
+        "isTestProject": true,
+        "numberOfFiles": 8,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 9898,
+        "linesOfCode": 50,
+        "totalApiScanned": 13,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "4402fa11-4202-46a3-a048-2f787e4c3787",
+          "ruleId": "NuGet.0005",
+          "projectPath": "Mp3ManglerTest\\Mp3ManglerTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "MSTest.TestAdapter, 1.2.1\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestAdapter, and replace with new package MSTest.TestAdapter, 4.4.1",
+              "protected": "MSTest.TestAdapter, 1.2.1\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestAdapter, and replace with new package MSTest.TestAdapter, 4.4.1"
+            },
+            "kind": "File",
+            "path": "Mp3ManglerTest\\Mp3ManglerTest.csproj",
+            "snippet": "MSTest.TestAdapter, 1.2.1\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestAdapter, and replace with new package MSTest.TestAdapter, 4.4.1",
+            "protectedSnippet": "MSTest.TestAdapter, 1.2.1\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestAdapter, and replace with new package MSTest.TestAdapter, 4.4.1",
+            "label": "MSTest.TestAdapter 1.2.1",
+            "properties": {
+              "PackageId": "MSTest.TestAdapter",
+              "PackageVersion": "1.2.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "31ec1517-9c96-4c85-b8b3-bdf40ad223bb",
+          "ruleId": "NuGet.0005",
+          "projectPath": "Mp3ManglerTest\\Mp3ManglerTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "MSTest.TestFramework, 1.2.1\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestFramework, and replace with new package MSTest.TestFramework, 4.4.1",
+              "protected": "MSTest.TestFramework, 1.2.1\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestFramework, and replace with new package MSTest.TestFramework, 4.4.1"
+            },
+            "kind": "File",
+            "path": "Mp3ManglerTest\\Mp3ManglerTest.csproj",
+            "snippet": "MSTest.TestFramework, 1.2.1\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestFramework, and replace with new package MSTest.TestFramework, 4.4.1",
+            "protectedSnippet": "MSTest.TestFramework, 1.2.1\n\nRecommendation:\n\nShould be replaced.\nRemove MSTest.TestFramework, and replace with new package MSTest.TestFramework, 4.4.1",
+            "label": "MSTest.TestFramework 1.2.1",
+            "properties": {
+              "PackageId": "MSTest.TestFramework",
+              "PackageVersion": "1.2.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "a0ccd834-d531-4df0-a120-28e8ff46de99",
+          "ruleId": "Project.0001",
+          "projectPath": "Mp3ManglerTest\\Mp3ManglerTest.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "File",
+            "path": "Mp3ManglerTest\\Mp3ManglerTest.csproj"
+          }
+        },
+        {
+          "incidentId": "8ac7488f-6e2d-430e-96fd-3e37b1448f55",
+          "ruleId": "Project.0002",
+          "projectPath": "Mp3ManglerTest\\Mp3ManglerTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: .NETFramework,Version=v4.8\nRecommended target framework: net10.0",
+              "protected": "Current target framework: .NETFramework,Version=v4.8\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "Mp3ManglerTest\\Mp3ManglerTest.csproj",
+            "snippet": "Current target framework: .NETFramework,Version=v4.8\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: .NETFramework,Version=v4.8\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": ".NETFramework,Version=v4.8",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "751a648b-1b82-48f0-89cd-38869ef66fcd",
+          "ruleId": "Binding.0003",
+          "projectPath": "Mp3ManglerTest\\Mp3ManglerTest.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "OutputType=Library with test framework references, GenerateBindingRedirectsOutputType not set",
+              "protected": "OutputType=Library with test framework references, GenerateBindingRedirectsOutputType not set"
+            },
+            "kind": "File",
+            "path": "Mp3ManglerTest\\Mp3ManglerTest.csproj",
+            "snippet": "OutputType=Library with test framework references, GenerateBindingRedirectsOutputType not set",
+            "protectedSnippet": "OutputType=Library with test framework references, GenerateBindingRedirectsOutputType not set"
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "NuGet.0005": {
+      "id": "NuGet.0005",
+      "isFeature": false,
+      "description": "NuGet package is deprecated.\n\nGo to its documentation and if there is a guidance for replacement of functionality provided by this package.",
+      "label": "NuGet package is deprecated",
+      "severity": "Optional",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262531",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "isFeature": false,
+      "description": "NuGet package upgrade is recommended for selected target framework.\n\nStandard .NET packages are recommended to have versions matching version of .NET that project targets.\n\nSome other packages also are known to work better for selected target frameworks.",
+      "label": "NuGet package upgrade is recommended",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0003": {
+      "id": "NuGet.0003",
+      "isFeature": false,
+      "description": "NuGet package functionality is included with framework reference.\n\nPackage needs to be removed.",
+      "label": "NuGet package functionality is included with framework reference",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262609",
+          "isCustom": false
+        }
+      ]
+    },
+    "Project.0001": {
+      "id": "Project.0001",
+      "isFeature": false,
+      "description": "Project file needs to be converted to SDK-style. Modern .NET framework projects require a change in the project file format and use SDK corresponding to project flavor and functionality.",
+      "label": "Project file needs to be converted to SDK-style",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to corresponding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in modern .NET frameworks (windows, iOS, Android etc).",
+      "label": "Project\u0027s target framework(s) needs to be changed",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Binding.0005": {
+      "id": "Binding.0005",
+      "isFeature": false,
+      "description": "Manual binding redirects exist but are missing a redirect for a referenced assembly with a version mismatch. This can cause MissingMethodException or FileLoadException when the missing redirect allows the app to start but fails when a specific code path is hit.",
+      "label": "Missing binding redirect for referenced assembly",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Assembly binding redirection",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262689",
+          "isCustom": false
+        }
+      ]
+    },
+    "Binding.0006": {
+      "id": "Binding.0006",
+      "isFeature": false,
+      "description": "An explicit binding redirect targets a different version than what auto-generation would produce. MSBuild will throw MSB3836 conflict error because it cannot determine which redirect wins.",
+      "label": "Manual redirect conflicts with auto-generated version",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Assembly binding redirection",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262689",
+          "isCustom": false
+        }
+      ]
+    },
+    "Binding.0007": {
+      "id": "Binding.0007",
+      "isFeature": false,
+      "description": "A binding redirect\u0027s newVersion is lower than the version provided by the NuGet package. This forced downgrade usually causes a load failure at runtime because the expected assembly version is not available.",
+      "label": "Binding redirect forces version downgrade",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Assembly binding redirection",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262689",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0003": {
+      "id": "Api.0003",
+      "isFeature": false,
+      "description": "API has a behavioral change in selected .NET version: code and binaries may behave differently at runtime without needing recompilation, but the new behavior might be undesirable and require updates.",
+      "label": "Behavioral change in selected .NET version",
+      "severity": "Potential",
+      "effort": 1
+    },
+    "NuGet.0001": {
+      "id": "NuGet.0001",
+      "isFeature": false,
+      "description": "NuGet package is incompatible with selected target framework.\n\nPackage needs to be upgraded to a version supporting selected project target framework. If there no new package versions supporting new target framework, different package needs to be used and all code needs to be upgraded to new API.",
+      "label": "NuGet package is incompatible",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262529",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0002": {
+      "id": "Api.0002",
+      "isFeature": false,
+      "description": "API is source incompatible for selected .NET version: requires code changes to compile successfully when targeting a new version, such as removing obsolete APIs or changing method signatures.",
+      "label": "Source incompatible for selected .NET version",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Breaking changes in .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    },
+    "Binding.0004": {
+      "id": "Binding.0004",
+      "isFeature": false,
+      "description": "AutoGenerateBindingRedirects is not set and no manual binding redirects were found. In some project types the default is false, leading to unpredictable behavior across different build environments or developer machines.",
+      "label": "AutoGenerateBindingRedirects not set and no manual redirects",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Assembly binding redirection",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262689",
+          "isCustom": false
+        }
+      ]
+    },
+    "Binding.0003": {
+      "id": "Binding.0003",
+      "isFeature": false,
+      "description": "Project outputs a library but may host entry points (e.g., unit tests, plugins). GenerateBindingRedirectsOutputType is not set. MSBuild only generates config files for Exe output types by default \u2014 without this flag, the test runner or plugin host will look for a config file that does not exist, causing hard-to-debug failures.",
+      "label": "Library-hosted entry point missing GenerateBindingRedirectsOutputType",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Assembly binding redirection",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262689",
+          "isCustom": false
+        }
+      ]
+    }
+  }
+}
