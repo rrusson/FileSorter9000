@@ -11,6 +11,7 @@
 - **Pending Changes**: Committed as `291c2c2` before creating the working branch.
 - **Commit Strategy**: After Each Task
 - **Branch Sync**: Auto (Merge)
+- **Warning handling**: Do not let non-blocking warnings stall progress; record them accurately. Do not suppress warnings.
 
 ## Key Decisions Log
 - Accepted the default initialization settings, including committing the detected pending changes before starting the upgrade.
