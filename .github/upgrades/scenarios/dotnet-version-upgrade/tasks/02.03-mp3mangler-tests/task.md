@@ -4,12 +4,14 @@
 Convert `Mp3ManglerTest/Mp3ManglerTest.csproj` to SDK style without changing its .NET Framework 4.8 target, MSTest package versions, or reference to Mp3Mangler.
 
 ## Scope and research
-The assessment identifies a classic MSTest library with five issues. Its two MSTest V1 packages (TestAdapter and TestFramework 1.2.1) are defined in `packages.config`; the project imports the legacy test targets and directly references `Mp3Mangler`. The assessment also notes a missing `GenerateBindingRedirectsOutputType` setting. Preserve versions and binding behavior during this format-only conversion; test-package modernization and binding redirect resolution belong to later migration work.
+The test library targets .NET Framework 4.8 and has `Mp3ManglerTest.cs`, `Properties/AssemblyInfo.cs`, and the local fixture `TestItems/NerdRockFromTheSun.mp3`. `get_project_dependencies` confirmed MSTest.TestAdapter and MSTest.TestFramework 1.2.1 and the `Mp3Mangler` project reference. `Mp3Mangler` was already converted to SDK style on `net48` and builds successfully. The SDK conversion preserved `net48`, the project reference, and MSTest versions; it removed `packages.config` and added `Microsoft.NET.Test.Sdk` 16.*. The conversion and initial build succeeded. An initial test run discovered one test but failed because its previous relative fixture path did not resolve in the SDK-style output layout. The test was changed to use `AppContext.BaseDirectory`, and the project was configured to copy the local fixture to output; post-change validation was cancelled at the user's request, so this adjustment remains unverified. Do not report the test as passing.
+
+The conversion tool generated an additional `Microsoft.NET.Test.Sdk` `16.*` PackageReference (the old project did not contain this package). The user's NuGet configuration enables package source mapping but does not map this package to any source, so the first restore failed with NU1100. Avoid modifying the user NuGet configuration; validate using an isolated temporary NuGet configuration mapping packages to nuget.org. The test project's existing assembly version is already fixed at `1.0.0.0`.
 
 ## Steps
-1. Convert after `Mp3Mangler`, following the retrieved project topological order.
+1. Use the retrieved topological ordering: `Mp3Mangler` is converted before this dependent test project.
 2. Call the dedicated SDK-style conversion tool for this project only.
-3. Build the project directly with Visual Studio MSBuild and restore on its original `net48` TFM.
-4. Verify `packages.config` is migrated/removed and run the existing MSTest suite if the installed runner supports the preserved package versions.
+3. Build the converted project on its original `net48` TFM. Initial restore required an isolated temporary NuGet configuration because the user's source mapping did not include the converter-added test SDK package; the global NuGet configuration was not changed.
+4. Verify `packages.config` was removed, the `Mp3Mangler` project reference remains, and record test discovery/run results and the unverified fixture adjustment.
 
-**Done when**: The test project is SDK-style, still targets .NET Framework 4.8, restores/builds without warnings, retains the `Mp3Mangler` project reference, and tests are discoverable/run where supported.
+**Done when**: The format conversion is complete, the project remains on .NET Framework 4.8, the `Mp3Mangler` project reference and MSTest package versions are retained, and build/test evidence is recorded. The initial build succeeded; the test failure and unverified attempted fix are explicitly documented for follow-up.
