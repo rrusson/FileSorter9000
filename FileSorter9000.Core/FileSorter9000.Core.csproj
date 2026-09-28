@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -13,6 +13,7 @@
    </ItemGroup>
 
    <ItemGroup>
-     <ProjectReference Include="..\Mp3Mangler\Mp3Mangler.csproj" />
+     <ProjectReference Include="..\Mp3Mangler.Shared\Mp3Mangler.Shared.csproj" />
    </ItemGroup>
 </Project>
+

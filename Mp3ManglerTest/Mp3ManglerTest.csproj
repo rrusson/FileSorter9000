@@ -4,7 +4,7 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Mp3Mangler\Mp3Mangler.csproj" />
+    <ProjectReference Include="..\Mp3Mangler.Shared\Mp3Mangler.Shared.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="TestItems\NerdRockFromTheSun.mp3" CopyToOutputDirectory="PreserveNewest" />

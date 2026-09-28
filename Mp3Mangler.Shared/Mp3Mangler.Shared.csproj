@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+	<TargetFramework>netstandard2.0</TargetFramework>
+	<RootNamespace>Mp3Mangler</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+	<Compile Include="..\Mp3Mangler\FileReader.cs" Link="FileReader.cs" />
+	<Compile Include="..\Mp3Mangler\FileWriter.cs" Link="FileWriter.cs" />
+	<Compile Include="..\Mp3Mangler\mp3Dto.cs" Link="mp3Dto.cs" />
+	<Compile Include="..\Mp3Mangler\Mp3InfoExtractor.cs" Link="Mp3InfoExtractor.cs" />
+	<Compile Include="..\Mp3Mangler\Mp3Processor.cs" Link="Mp3Processor.cs" />
+	<Compile Include="..\Mp3Mangler\Mp3TagAndFileInfo.cs" Link="Mp3TagAndFileInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+	<PackageReference Include="CsvHelper" Version="27.2.1" />
+	<PackageReference Include="taglib-sharp-netstandard2.0" Version="2.1.0" />
+  </ItemGroup>
+</Project>
+
