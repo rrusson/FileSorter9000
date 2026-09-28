@@ -6,7 +6,7 @@
 - **Scope**: Upgrade all projects and dependencies in the solution, starting with `FileSorter9000.Core`.
 
 ## Source Control
-- **Source Branch**: `Main`
+- **Source Branch**: `master`
 - **Working Branch**: `upgrade-projects`
 - **Pending Changes**: Committed as `291c2c2` before creating the working branch.
 - **Commit Strategy**: After Each Task
@@ -16,6 +16,7 @@
 - Accepted the default initialization settings, including committing the detected pending changes before starting the upgrade.
 - Confirmed Bottom-Up strategy, in-place migration for legacy class libraries, per-project package management during migration, deferred resolution of unsupported packages, inline API fixes, and review of binding redirects.
 - Chose to extract reusable MP3 functionality into a library while preserving the Mp3Mangler command-line executable; FileSorter9000.Core will depend on the library.
+- Confirmed `master` as the source branch for sync; authorized discarding the uncommitted `Mp3Mangler/Program.cs` edit as nonessential.
 
 ## Upgrade Options
 
