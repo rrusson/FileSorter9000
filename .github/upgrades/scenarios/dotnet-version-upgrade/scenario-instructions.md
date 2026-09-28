@@ -45,3 +45,7 @@
 - Keep tests with the project they validate, or immediately after it, and run them at each tier boundary.
 - Apply direct package replacements, defer unresolved incompatible packages to follow-up work, and fix API changes inline.
 - After migration stabilizes, include central package management as a deferred recommendation and run full-solution build and tests.
+
+## User Preferences
+### Execution Style
+- Always use Windows CRLF line endings in all repository and workflow files. User works on Windows and does not use Linux.
