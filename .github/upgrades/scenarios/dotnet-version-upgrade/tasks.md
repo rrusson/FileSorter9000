@@ -1,7 +1,7 @@
 # Migration Progress
 
-**Progress**: 12/16 tasks complete <progress value="75" max="100"></progress> 75%
-**Status**: In Progress - Task 05-windows-app
+**Progress**: 15/16 tasks complete <progress value="94" max="100"></progress> 94%
+**Status**: Not Started
 
 ## Tasks
 
@@ -16,10 +16,10 @@
   - ✅ 03.03-mp3-shared-library: Extract reusable MP3 code into compatibility library ([Content](tasks/03.03-mp3-shared-library/task.md), [Progress](tasks/03.03-mp3-shared-library/progress-details.md))
   - ✅ 03.04-mp3-executable-and-tests: Upgrade MP3 console executable and tests to .NET 10 ([Content](tasks/03.04-mp3-executable-and-tests/task.md), [Progress](tasks/03.04-mp3-executable-and-tests/progress-details.md))
 - ✅ 04-core-library: Upgrade FileSorter9000.Core ([Content](tasks/04-core-library/task.md), [Progress](tasks/04-core-library/progress-details.md))
-- 🔄 05-windows-app: Replatform FileSorter9000 and its UI tests ([Content](tasks/05-windows-app/task.md))
+- ✅ 05-windows-app: Replatform FileSorter9000 and its UI tests ([Content](tasks/05-windows-app/task.md), [Progress](tasks/05-windows-app/progress-details.md))
   - ✅ 05.01-windows-app-project-conversion: Convert UWP project to Windows App SDK .NET 10 ([Content](tasks/05.01-windows-app-project-conversion/task.md), [Progress](tasks/05.01-windows-app-project-conversion/progress-details.md))
-  - 🔲 05.02-windows-app-api-migration: Migrate UWP APIs, packages, and XAML app code
-  - 🔲 05.03-winappdriver-tests: Migrate UI automation test project and validate Windows app
+  - ✅ 05.02-windows-app-api-migration: Migrate UWP APIs, packages, and XAML app code ([Content](tasks/05.02-windows-app-api-migration/task.md), [Progress](tasks/05.02-windows-app-api-migration/progress-details.md))
+    - ✅ 05.02.01-api-replacement-research: Research supported WinUI replacements and migration decisions ([Content](tasks/05.02.01-api-replacement-research/task.md), [Progress](tasks/05.02.01-api-replacement-research/progress-details.md))
 - 🔲 06-consolidation-validation: Remove migration bridges and validate the solution ([Content](tasks/06-consolidation-validation/task.md))
 
 **Legend**: ✅ Complete | 🔄 In Progress | 🔲 Pending | ⚠️ Blocked | ❌ Failed
