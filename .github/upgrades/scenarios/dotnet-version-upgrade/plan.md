@@ -59,8 +59,57 @@ Migrate `FileSorter9000.Core` from .NET Standard 2.1 to .NET 10 after the shared
 ### 05-windows-app: Replatform FileSorter9000 and its UI tests
 
 Migrate the UWP application to a Windows App SDK/WinUI project targeting .NET 10 for Windows. Replace UWP-only packages and APIs identified by the assessment, preserve application behavior and packaging/activation expectations, and update `FileSorter9000.Tests.WinAppDriver` to a supported test target and current test dependencies. This is a platform migration, not only a TFM edit; validate the resulting Windows application and its automation tests on a supported Windows environment.
+Track project conversion (`05.01`), API/package/XAML migration (`05.02`), and WinAppDriver test migration (`05.03`) as direct tasks before consolidation.
 
 **Done when**: The app uses the Windows App SDK on .NET 10, incompatible UWP packages/APIs have supported replacements or tracked resolution tasks, the app builds and launches, and applicable WinAppDriver tests pass.
+
+### 05.01-windows-app-project-conversion: Convert the UWP project to Windows App SDK
+
+Convert the legacy UWP project to SDK-style and establish the Windows App SDK/WinUI target while preserving the packaged-app manifest, assets, and Core reference. Packaging asset/signing constraints and any remaining build blockers must be recorded.
+
+**Done when**: The project targets the Windows-qualified .NET 10 TFM with Windows App SDK configuration, and package/activation blockers are explicitly documented.
+
+### 05.02-windows-app-api-migration: Migrate UWP APIs, packages, and XAML app code
+
+Replace incompatible UWP packages and migrate app code and XAML to supported WinUI/Windows App SDK equivalents. This broad platform migration is divided into researched package/API decisions, implementation by feature area, and integration validation.
+
+**Done when**: App sources compile against supported Windows App SDK APIs, incompatible dependencies and behavior changes are tracked, and app build validation is completed or blockers are documented.
+
+### 05.02.01-api-replacement-research: Research supported WinUI replacements
+
+Document compatible packages and migration paths for the incompatible Toolkit APIs, XAML controls/behaviors, notifications, app lifecycle, and removed WinRT interop surfaces before implementation.
+
+**Done when**: Each major incompatible package and API group has an evidence-based disposition and downstream boundaries are clear.
+
+### 05.02.02-mvvm-and-toolkit-services: Migrate MVVM and Toolkit helper/toast dependencies
+
+Update MVVM, first-run helper, and toast code/package references to supported APIs while preserving observable properties, commands, preference behavior, and activation behavior where supported.
+
+**Done when**: This feature group no longer relies on incompatible Toolkit APIs and the project restores/builds as far as remaining work permits.
+
+#### 05.02.03-winui-controls-behaviors-animations: Migrate controls, behaviors, and animations
+
+Replace Toolkit TreeView, XAML behaviors, and connected-animation usage with supported WinUI APIs or document unavoidable behavior changes while preserving ordinary navigation and control behavior.
+
+**Done when**: No incompatible control/behavior/animation usage in this group remains untracked, and relevant XAML compiles.
+
+#### 05.02.04-winui-app-lifecycle-and-platform-apis: Migrate app lifecycle and UWP-specific APIs
+
+Adapt app startup, activation, background tasks, WinRT interop, storage, pickers, and remaining UWP XAML API usage to packaged WinUI behavior where supported.
+
+**Done when**: Production sources compile against supported APIs and lifecycle or runtime differences are documented.
+
+#### 05.02.05-app-api-integration-validation: Integrate and validate the Windows app migration
+
+Restore/build the app with Visual Studio MSBuild, resolve migration-related errors and warnings without suppression, verify manifest/package configuration, and run available smoke checks.
+
+**Done when**: The integrated app build and applicable tests pass, or remaining environment/platform blockers are precisely documented with no unresolved dependency/API left untracked.
+
+#### 05.03-winappdriver-tests: Migrate WinAppDriver tests
+
+Retarget the UI automation test project and update its test dependencies to supported versions while preserving its role as app validation.
+
+**Done when**: The automation test project builds and applicable tests run or their Windows environment limitation is documented.
 
 ### 06-consolidation-validation: Remove migration bridges and validate the solution
 

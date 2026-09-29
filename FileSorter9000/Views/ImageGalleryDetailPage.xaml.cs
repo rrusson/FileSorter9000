@@ -1,16 +1,14 @@
-﻿using System;
+using System;
 
 using FileSorter9000.Core.Models;
 using FileSorter9000.Helpers;
 using FileSorter9000.Services;
 using FileSorter9000.ViewModels;
 
-using Microsoft.Toolkit.Uwp.UI.Animations;
-
 using Windows.System;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Navigation;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Input;
+using Microsoft.UI.Xaml.Navigation;
 
 namespace FileSorter9000.Views
 {
@@ -35,7 +33,6 @@ namespace FileSorter9000.Views
             base.OnNavigatingFrom(e);
             if (e.NavigationMode == NavigationMode.Back)
             {
-                NavigationService.Frame.SetListDataItemForNextConnectedAnimation(ViewModel.SelectedImage);
                 ImagesNavigationHelper.RemoveImageId(ImageGalleryViewModel.ImageGallerySelectedIdKey);
             }
         }

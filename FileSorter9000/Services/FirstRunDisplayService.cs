@@ -1,31 +1,30 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
-
 using FileSorter9000.Views;
-
-using Microsoft.Toolkit.Uwp.Helpers;
-
-using Windows.ApplicationModel.Core;
-using Windows.UI.Core;
+using Microsoft.UI.Xaml;
+using Windows.Storage;
 
 namespace FileSorter9000.Services
 {
     public static class FirstRunDisplayService
     {
-        private static bool shown = false;
+        private const string HasShownFirstRunKey = "HasShownFirstRun";
+        private static bool _shown;
 
         internal static async Task ShowIfAppropriateAsync()
         {
-            await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(
-                CoreDispatcherPriority.Normal, async () =>
+            var settings = ApplicationData.Current.LocalSettings;
+            if (!_shown && settings.Values[HasShownFirstRunKey] is not true)
+            {
+                _shown = true;
+                var dialog = new FirstRunDialog
                 {
-                    if (SystemInformation.Instance.IsFirstRun && !shown)
-                    {
-                        shown = true;
-                        var dialog = new FirstRunDialog();
-                        await dialog.ShowAsync();
-                    }
-                });
+                    XamlRoot = (Window.Current.Content as FrameworkElement)?.XamlRoot
+                };
+
+                await dialog.ShowAsync();
+                settings.Values[HasShownFirstRunKey] = true;
+            }
         }
     }
 }

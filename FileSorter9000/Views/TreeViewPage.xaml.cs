@@ -1,6 +1,6 @@
 using FileSorter9000.ViewModels;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
 using FileSorter9000.Core.Services;
 using FileSorter9000.Services;
 

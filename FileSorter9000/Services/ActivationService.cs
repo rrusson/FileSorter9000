@@ -1,7 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Runtime.Versioning;
 
 using FileSorter9000.Activation;
 using FileSorter9000.Core.Helpers;
@@ -9,11 +10,12 @@ using FileSorter9000.Core.Services;
 using FileSorter9000.Services;
 
 using Windows.ApplicationModel.Activation;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
 
 namespace FileSorter9000.Services
 {
+    [SupportedOSPlatform("windows10.0.17763.0")]
     // For more information on understanding and extending activation flow see
     // https://github.com/Microsoft/WindowsTemplateStudio/blob/release/docs/UWP/activation.md
     internal class ActivationService

@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 
 using FileSorter9000.ViewModels;
 
 using Windows.Media.Playback;
 using Windows.System.Display;
 using Windows.UI.Core;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Navigation;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Navigation;
 
 namespace FileSorter9000.Views
 {

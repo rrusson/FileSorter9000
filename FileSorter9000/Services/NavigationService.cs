@@ -1,12 +1,14 @@
-﻿using System;
+using System;
+using System.Runtime.Versioning;
 
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Media.Animation;
-using Windows.UI.Xaml.Navigation;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Media.Animation;
+using Microsoft.UI.Xaml.Navigation;
 
 namespace FileSorter9000.Services
 {
+    [SupportedOSPlatform("windows10.0.17763.0")]
     public static class NavigationService
     {
         public static event NavigatedEventHandler Navigated;

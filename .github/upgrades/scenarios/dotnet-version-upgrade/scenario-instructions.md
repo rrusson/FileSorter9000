@@ -4,6 +4,7 @@
 - **Flow Mode**: Automatic
 - **Target Framework**: `net10.0` (.NET 10 LTS)
 - **Scope**: Upgrade all projects and dependencies in the solution, starting with `FileSorter9000.Core`.
+- **Line endings**: Always enforce Windows CRLF for every repository text file, including code, configuration, documentation, and workflow artifacts; repository `.gitattributes` must enforce CRLF.
 
 ## Source Control
 - **Source Branch**: `master`

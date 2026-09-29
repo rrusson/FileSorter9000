@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 
 using FileSorter9000.Core.Helpers;
 using FileSorter9000.Core.Services;
 using FileSorter9000.Helpers;
 
-using Microsoft.Toolkit.Mvvm.ComponentModel;
-using Microsoft.Toolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
 namespace FileSorter9000.ViewModels
 {
