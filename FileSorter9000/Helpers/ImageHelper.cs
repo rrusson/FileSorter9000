@@ -1,5 +1,4 @@
 using System;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 
 using Windows.Storage.Streams;
@@ -15,7 +14,13 @@ namespace FileSorter9000.Helpers
             var image = new BitmapImage();
             using (var stream = new InMemoryRandomAccessStream())
             {
-                await stream.WriteAsync(byteArray.AsBuffer());
+                using (var writer = new DataWriter(stream))
+                {
+                    writer.WriteBytes(byteArray);
+                    await writer.StoreAsync();
+                    writer.DetachStream();
+                }
+
                 stream.Seek(0);
                 await image.SetSourceAsync(stream);
             }

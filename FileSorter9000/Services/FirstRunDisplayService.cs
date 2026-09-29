@@ -19,7 +19,7 @@ namespace FileSorter9000.Services
                 _shown = true;
                 var dialog = new FirstRunDialog
                 {
-                    XamlRoot = (Window.Current.Content as FrameworkElement)?.XamlRoot
+                    XamlRoot = (ActivationService.MainWindow.Content as FrameworkElement)?.XamlRoot
                 };
 
                 await dialog.ShowAsync();

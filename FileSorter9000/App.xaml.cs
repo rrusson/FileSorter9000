@@ -41,15 +41,11 @@ namespace FileSorter9000
             if (args == null)
             {
                 throw new ArgumentNullException(nameof(args));
-            await ActivationService.ActivateAsync(args).ConfigureAwait(false);
             }
 
-        }
-
-        private async void OnActivated(object sender, Windows.ApplicationModel.Activation.IActivatedEventArgs args)
-        {
             await ActivationService.ActivateAsync(args).ConfigureAwait(false);
         }
+
 
         private void OnAppUnhandledException(object sender, Microsoft.UI.Xaml.UnhandledExceptionEventArgs e)
         {

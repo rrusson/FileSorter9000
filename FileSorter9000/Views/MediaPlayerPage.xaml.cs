@@ -4,8 +4,8 @@ using FileSorter9000.ViewModels;
 
 using Windows.Media.Playback;
 using Windows.System.Display;
-using Windows.UI.Core;
 using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Dispatching;
 using Microsoft.UI.Xaml.Navigation;
 
 namespace FileSorter9000.Views
@@ -46,7 +46,7 @@ namespace FileSorter9000.Views
                 {
                     if (!_isRequestActive)
                     {
-                        await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+                        DispatcherQueue.TryEnqueue(DispatcherQueuePriority.Normal, () =>
                         {
                             _displayRequest.RequestActive();
                             _isRequestActive = true;
@@ -57,7 +57,7 @@ namespace FileSorter9000.Views
                 {
                     if (_isRequestActive)
                     {
-                        await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+                        DispatcherQueue.TryEnqueue(DispatcherQueuePriority.Normal, () =>
                         {
                             _displayRequest.RequestRelease();
                             _isRequestActive = false;

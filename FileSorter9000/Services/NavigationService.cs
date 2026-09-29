@@ -24,7 +24,7 @@ namespace FileSorter9000.Services
             {
                 if (_frame == null)
                 {
-                    _frame = Window.Current.Content as Frame;
+                    _frame = ActivationService.MainWindow.Content as Frame;
                     RegisterFrameEvents();
                 }
 

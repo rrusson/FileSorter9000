@@ -1,6 +1,6 @@
 # Migration Progress
 
-**Progress**: 15/21 tasks complete <progress value="71" max="100"></progress> 71%
+**Progress**: 16/21 tasks complete <progress value="76" max="100"></progress> 76%
 **Status**: In Progress - Task 05-windows-app
 
 ## Tasks
@@ -22,7 +22,7 @@
     - ✅ 05.02.01-api-replacement-research: Research supported WinUI replacements and migration decisions ([Content](tasks/05.02.01-api-replacement-research/task.md), [Progress](tasks/05.02.01-api-replacement-research/progress-details.md))
     - ✅ 05.02.02-mvvm-and-toolkit-services: Migrate MVVM and Toolkit helper/toast dependencies ([Content](tasks/05.02.02-mvvm-and-toolkit-services/task.md), [Progress](tasks/05.02.02-mvvm-and-toolkit-services/progress-details.md))
     - ✅ 05.02.03-winui-controls-behaviors-animations: Migrate controls, behaviors, and animations ([Content](tasks/05.02.03-winui-controls-behaviors-animations/task.md), [Progress](tasks/05.02.03-winui-controls-behaviors-animations/progress-details.md))
-    - 🔲 05.02.04-winui-app-lifecycle-and-platform-apis: Migrate app lifecycle and UWP-specific APIs ([Content](tasks/05.02.04-winui-app-lifecycle-and-platform-apis/task.md))
+    - ✅ 05.02.04-winui-app-lifecycle-and-platform-apis: Migrate app lifecycle and UWP-specific APIs ([Content](tasks/05.02.04-winui-app-lifecycle-and-platform-apis/task.md), [Progress](tasks/05.02.04-winui-app-lifecycle-and-platform-apis/progress-details.md))
     - 🔲 05.02.05-app-api-integration-validation: Integrate and validate the Windows app migration ([Content](tasks/05.02.05-app-api-integration-validation/task.md))
   - 🔲 05.03-winappdriver-tests: Migrate WinAppDriver tests ([Content](tasks/05.03-winappdriver-tests/task.md), [Progress](tasks/05.03-winappdriver-tests/progress-details.md))
 - ❌ 06-consolidation-validation: Remove migration bridges and validate the solution ([Content](tasks/06-consolidation-validation/task.md), [Progress](tasks/06-consolidation-validation/progress-details.md))
