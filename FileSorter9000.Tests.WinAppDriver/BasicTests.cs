@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -19,7 +19,7 @@ namespace FileSorter9000.Tests.WinAppDriver
         // The app must also be installed (or launched for debugging) for WinAppDriver to be able to launch it.
         protected const string AppToLaunch = "666ABCDE-B052-9F0F-6502-A31415296535!App";
 
-        protected static WindowsDriver<WindowsElement> AppSession { get; set; }
+        protected static WindowsDriver AppSession { get; set; }
 
         private static string _screenshotFolder;
 
@@ -42,10 +42,12 @@ namespace FileSorter9000.Tests.WinAppDriver
         {
             if (AppSession == null)
             {
-                var appiumOptions = new AppiumOptions();
-                appiumOptions.AddAdditionalCapability("app", AppToLaunch);
-                appiumOptions.AddAdditionalCapability("deviceName", "WindowsPC");
-                AppSession = new WindowsDriver<WindowsElement>(new Uri(WindowsApplicationDriverUrl), appiumOptions);
+                var appiumOptions = new AppiumOptions
+                {
+                    App = AppToLaunch,
+                    DeviceName = "WindowsPC"
+                };
+                AppSession = new WindowsDriver(new Uri(WindowsApplicationDriverUrl), appiumOptions);
 
                 Assert.IsNotNull(AppSession, "Unable to launch app.");
 
@@ -63,7 +65,7 @@ namespace FileSorter9000.Tests.WinAppDriver
             var screenshotFileName = Path.Combine(_screenshotFolder, $"{Path.GetRandomFileName()}.png");
 
             var screenshot = AppSession.GetScreenshot();
-            screenshot.SaveAsFile(screenshotFileName, ScreenshotImageFormat.Png);
+            screenshot.SaveAsFile(screenshotFileName);
 
             Assert.IsTrue(File.Exists(screenshotFileName));
         }

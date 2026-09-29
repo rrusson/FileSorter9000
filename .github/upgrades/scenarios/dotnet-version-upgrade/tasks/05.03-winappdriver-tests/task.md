@@ -18,10 +18,10 @@ Move the WinAppDriver test project to an appropriate supported test target, upda
 - The code writes a screenshot under `%SystemDrive%\Temp\Screenshots\...`; test-runner compatibility and directory permissions should be checked. Assessment flags TimeSpan/Uri behavioral usages and binding redirect generation for the library test host.
 - Tests are UI automation and do not reference the app project directly; the app migration is separately represented in the Windows app phase.
 
-## Current Revalidation
-- Re-ran Visual Studio Test Explorer discovery for project `FileSorter9000.Tests.WinAppDriver`; no tests were discovered in this session.
-- Re-ran `dotnet test ... --no-build`; testhost aborted before executing the test because `Appium.WebDriver` 4.3.1 `lib/netstandard2.0/Appium.Net.dll` is missing from the resolved test dependency manifest. This reproduces the previously recorded blocker; the test project source/dependencies have not changed as part of the app-integration task.
-- App integration has completed; Appium 9.0.0 was not adopted because package source mapping blocked restore in earlier attempts. Runtime automation remains blocked until Appium's resolved files and WinAppDriver/app installation prerequisites are repaired.
+## Resolved test infrastructure and current runtime status
+- Isolated package restore confirmed `Appium.WebDriver` 9.0.0 is available from nuget.org; the previous mapping restriction was a user-level NuGet source allowlist issue, not a package incompatibility. Existing user NuGet configuration was not changed.
+- Upgraded Appium to 9.0.0 and adapted `BasicTests.cs` to the non-generic `WindowsDriver`, typed `App`/`DeviceName` options, and current screenshot API. Added Microsoft.NET.Test.Sdk 18.10.1 and enabled local package copies; this supplies `Appium.Net.dll` and the testhost infrastructure.
+- Replaced incorrect earlier discovery/test notes: `dotnet test --list-tests` now discovers `TakeScreenshotOfLaunchPage`, and the testhost starts successfully. Test execution reaches the session creation step but fails because no service accepts connections at `127.0.0.1:4723`; launch WinAppDriver and install the packaged app to finish runtime validation.
 
 ## Steps
 1. Read and assess the existing test code and runtime prerequisites.

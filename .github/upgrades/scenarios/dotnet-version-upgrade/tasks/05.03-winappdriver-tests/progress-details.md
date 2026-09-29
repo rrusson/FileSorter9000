@@ -1,23 +1,16 @@
-# 05.03 WinAppDriver Test Project Migration — Progress
+# Progress Details: WinAppDriver Test Project Migration
 
 ## Changes
-- Updated `FileSorter9000.Tests.WinAppDriver.csproj` to target `r`net10.0` and set `IsTestProject` explicitly.
-- Upgraded MSTest.TestAdapter and MSTest.TestFramework from 2.2.4 to 4.4.1.
-- Kept Appium.WebDriver at 4.3.1 because Appium 9.0.0 restore was blocked by the machine-level NuGet PackageSourceMapping allowlist. Appium 4.3.1 still restores under the current configuration.
-- Updated the task notes with confirmed assessment, dependencies, and validation evidence.
+- Kept the already SDK-style test project targeting `r`net10.0` and MSTest 4.4.1.
+- Upgraded Appium.WebDriver from 4.3.1 to 9.0.0. A temporary isolated NuGet.Config containing only nuget.org successfully restored it, proving the previous restore limitation came from user-level package source mapping; repository/user NuGet configuration was not changed.
+- Migrated `BasicTests.cs` to Appium 9 APIs: non-generic `WindowsDriver`, strongly typed `App` and `DeviceName`, and `Screenshot.SaveAsFile(path)`.
+- Added Microsoft.NET.Test.Sdk 18.10.1 and `CopyLocalLockFileAssemblies=true`. This resolved the missing `Appium.Net.dll` testhost dependency after diagnosis showed the test project's effective `CopyLocalLockFileAssemblies` was false.
 
 ## Validation
-- `dotnet build FileSorter9000.Tests.WinAppDriver/FileSorter9000.Tests.WinAppDriver.csproj`: succeeds, output at `bin/Debug/net10.0/FileSorter9000.Tests.WinAppDriver.dll`.
-- Restore reports NU1903 for transitive Newtonsoft.Json 12.0.1 and NU1904 for transitive System.Drawing.Common 4.5.1.
-- Test Explorer discovery finds `TakeScreenshotOfLaunchPage`.
-- `dotnet test ... --no-build`: testhost aborts before the test runs because the dependency manifest references Appium.WebDriver 4.3.1's `lib/netstandard2.0/Appium.Net.dll`, which is not found in the testhost dependency layout. This is not evidence of a passing UI test. Appium 9 should be reconsidered after NuGet package source mapping is updated; runtime validation will additionally require WinAppDriver and an installed app package.
-- `git diff --check` passed. CRLF verification passed for the modified project and task artifact.
+- `dotnet build FileSorter9000.Tests.WinAppDriver/FileSorter9000.Tests.WinAppDriver.csproj --no-restore`: succeeded; `Appium.Net.dll` is copied beside the test assembly.
+- `dotnet test ... --no-build --list-tests`: succeeded and discovered `TakeScreenshotOfLaunchPage`.
+- `dotnet test ... --no-build`: testhost and Appium initialize, but the test fails at session creation because no service is listening at `http://127.0.0.1:4723` (`actively refused`). Start WinAppDriver and ensure the app is installed/launchable to complete the real UI smoke test.
+- All changes use CRLF; no warning suppressions added.
 
-## Latest revalidation
-- Current Visual Studio Test Explorer query returned no tests for `FileSorter9000.Tests.WinAppDriver`.
-- Repeated `dotnet test ... --no-build`: testhost aborted before executing any test because Appium.WebDriver 4.3.1's dependency `lib/netstandard2.0/Appium.Net.dll` was absent from the resolved test dependency manifest.
-- This task is recorded as blocked/failed pending a resolvable Appium dependency layout/package source mapping and the external WinAppDriver plus installed-app runtime prerequisites. No claim of UI test pass is made.
-
-## Deviation / open blockers
-- Plain `r`net10.0` is used instead of `r`net10.0-windows...` because the test project uses no Windows SDK APIs, and the Windows-qualified TFM caused the testhost to abort on a missing `Microsoft.Windows.SDK.NET.dll` runtime-pack assembly.
-- Full solution restore remains blocked by the Windows app's incompatible `Microsoft.Toolkit.Uwp` 7.0.2 and `Microsoft.Toolkit.Uwp.UI.Animations` 7.0.2 packages. Other projects also report existing package vulnerability warnings.
+## Remaining limitation
+- Test code/build/test discovery are now migrated and operational. Actual UI automation is environment-blocked solely at this point by the absent WinAppDriver endpoint (and will further require a valid installed MSIX package identity).
