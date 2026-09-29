@@ -18,6 +18,11 @@ Move the WinAppDriver test project to an appropriate supported test target, upda
 - The code writes a screenshot under `%SystemDrive%\Temp\Screenshots\...`; test-runner compatibility and directory permissions should be checked. Assessment flags TimeSpan/Uri behavioral usages and binding redirect generation for the library test host.
 - Tests are UI automation and do not reference the app project directly; the app migration is separately represented in the Windows app phase.
 
+## Current Revalidation
+- Re-ran Visual Studio Test Explorer discovery for project `FileSorter9000.Tests.WinAppDriver`; no tests were discovered in this session.
+- Re-ran `dotnet test ... --no-build`; testhost aborted before executing the test because `Appium.WebDriver` 4.3.1 `lib/netstandard2.0/Appium.Net.dll` is missing from the resolved test dependency manifest. This reproduces the previously recorded blocker; the test project source/dependencies have not changed as part of the app-integration task.
+- App integration has completed; Appium 9.0.0 was not adopted because package source mapping blocked restore in earlier attempts. Runtime automation remains blocked until Appium's resolved files and WinAppDriver/app installation prerequisites are repaired.
+
 ## Steps
 1. Read and assess the existing test code and runtime prerequisites.
 2. Retarget the already SDK-style test project to .NET 10 and update MSTest packages. Appium remains 4.3.1 until source mapping permits a validated Appium 9 upgrade.

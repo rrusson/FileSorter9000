@@ -13,6 +13,11 @@
 - `dotnet test ... --no-build`: testhost aborts before the test runs because the dependency manifest references Appium.WebDriver 4.3.1's `lib/netstandard2.0/Appium.Net.dll`, which is not found in the testhost dependency layout. This is not evidence of a passing UI test. Appium 9 should be reconsidered after NuGet package source mapping is updated; runtime validation will additionally require WinAppDriver and an installed app package.
 - `git diff --check` passed. CRLF verification passed for the modified project and task artifact.
 
+## Latest revalidation
+- Current Visual Studio Test Explorer query returned no tests for `FileSorter9000.Tests.WinAppDriver`.
+- Repeated `dotnet test ... --no-build`: testhost aborted before executing any test because Appium.WebDriver 4.3.1's dependency `lib/netstandard2.0/Appium.Net.dll` was absent from the resolved test dependency manifest.
+- This task is recorded as blocked/failed pending a resolvable Appium dependency layout/package source mapping and the external WinAppDriver plus installed-app runtime prerequisites. No claim of UI test pass is made.
+
 ## Deviation / open blockers
 - Plain `r`net10.0` is used instead of `r`net10.0-windows...` because the test project uses no Windows SDK APIs, and the Windows-qualified TFM caused the testhost to abort on a missing `Microsoft.Windows.SDK.NET.dll` runtime-pack assembly.
 - Full solution restore remains blocked by the Windows app's incompatible `Microsoft.Toolkit.Uwp` 7.0.2 and `Microsoft.Toolkit.Uwp.UI.Animations` 7.0.2 packages. Other projects also report existing package vulnerability warnings.
