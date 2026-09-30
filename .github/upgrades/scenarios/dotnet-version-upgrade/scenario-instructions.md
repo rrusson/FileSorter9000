@@ -50,3 +50,4 @@
 ## User Preferences
 ### Execution Style
 - Always use Windows CRLF line endings in all repository and workflow files. User works on Windows and does not use Linux.
+- **Build recovery**: Make a best effort to diagnose and overcome build/test issues with targeted fixes; document remaining environmental blockers accurately and do not suppress warnings.
