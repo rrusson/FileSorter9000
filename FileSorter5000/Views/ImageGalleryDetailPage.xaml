@@ -1,0 +1,27 @@
+<Page
+    x:Class="FileSorter5000.Views.ImageGalleryDetailPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:models="using:FileSorter9000.Core.Models"
+    KeyDown="OnPageKeyDown"
+    mc:Ignorable="d">
+
+    <Grid>
+        <FlipView
+            ItemsSource="{x:Bind ViewModel.Source, Mode=OneWay}"
+            SelectedItem="{x:Bind ViewModel.SelectedImage, Mode=TwoWay}">
+            <FlipView.ItemTemplate>
+                <DataTemplate x:DataType="models:SampleImage">
+                    <Viewbox StretchDirection="DownOnly">
+                        <Image
+                            x:Name="detailImage"
+                            Source="{x:Bind Source}"
+                            Stretch="None" />
+                    </Viewbox>
+                </DataTemplate>
+            </FlipView.ItemTemplate>
+        </FlipView>
+    </Grid>
+</Page>
