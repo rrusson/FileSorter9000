@@ -1,7 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Runtime.Versioning;
 
 using FileSorter9000.Activation;
 using FileSorter9000.Core.Helpers;
@@ -9,15 +10,18 @@ using FileSorter9000.Core.Services;
 using FileSorter9000.Services;
 
 using Windows.ApplicationModel.Activation;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
 
 namespace FileSorter9000.Services
 {
+    [SupportedOSPlatform("windows10.0.17763.0")]
     // For more information on understanding and extending activation flow see
     // https://github.com/Microsoft/WindowsTemplateStudio/blob/release/docs/UWP/activation.md
     internal class ActivationService
     {
+        internal static readonly Window MainWindow = new Window();
+
         private readonly App _app;
         private readonly Type _defaultNavItem;
         private Lazy<UIElement> _shell;
@@ -54,10 +58,10 @@ namespace FileSorter9000.Services
 
                 // Do not repeat app initialization when the Window already has content,
                 // just ensure that the window is active
-                if (Window.Current.Content == null)
+                if (MainWindow.Content == null)
                 {
                     // Create a Shell or Frame to act as the navigation context
-                    Window.Current.Content = _shell?.Value ?? new Frame();
+                    MainWindow.Content = _shell?.Value ?? new Frame();
                 }
             }
 
@@ -73,7 +77,7 @@ namespace FileSorter9000.Services
             if (IsInteractive(activationArgs))
             {
                 // Ensure the current window is active
-                Window.Current.Activate();
+                MainWindow.Activate();
 
                 // Tasks after activation
                 await StartupAsync().ConfigureAwait(false);
@@ -84,12 +88,12 @@ namespace FileSorter9000.Services
         {
             if (_shell?.Value != null)
             {
-                Window.Current.Content = _shell.Value;
+                MainWindow.Content = _shell.Value;
             }
             else
             {
                 var frame = new Frame();
-                Window.Current.Content = frame;
+                MainWindow.Content = frame;
                 NavigationService.Frame = frame;
             }
 
@@ -144,7 +148,7 @@ namespace FileSorter9000.Services
         {
             var frame = new Frame();
             NavigationService.Frame = frame;
-            Window.Current.Content = frame;
+            MainWindow.Content = frame;
             await ThemeSelectorService.SetRequestedThemeAsync().ConfigureAwait(true);
             NavigationService.Navigate<Views.LogInPage>();
         }

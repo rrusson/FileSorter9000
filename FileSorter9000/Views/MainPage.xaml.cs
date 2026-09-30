@@ -1,12 +1,12 @@
-﻿using FileSorter9000.Core.Services;
+using FileSorter9000.Core.Services;
 using FileSorter9000.Helpers;
 using FileSorter9000.Services;
 using FileSorter9000.ViewModels;
 
 using System.Threading.Tasks;
 
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
 
 namespace FileSorter9000.Views
 {
@@ -26,7 +26,7 @@ namespace FileSorter9000.Views
         }
 
 
-        private async void PickExampleFolderButtonClick(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private async void PickExampleFolderButtonClick(object sender, RoutedEventArgs e)
         {
             string folder = await FolderHelper.SetStorageFolder("ExampleFolderToken").ConfigureAwait(true);
 
@@ -35,7 +35,7 @@ namespace FileSorter9000.Views
             ToggleStartButton();
         }
 
-        private async void PickSourceFolderButtonClick(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private async void PickSourceFolderButtonClick(object sender, RoutedEventArgs e)
         {
             string folder = await FolderHelper.SetStorageFolder("SourceFolderToken").ConfigureAwait(true);
 
@@ -44,7 +44,7 @@ namespace FileSorter9000.Views
             ToggleStartButton();
         }
 
-        private async void PickTargetFolderButtonClick(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private async void PickTargetFolderButtonClick(object sender, RoutedEventArgs e)
         {
             string folder = await FolderHelper.SetStorageFolder("TargetFolderToken").ConfigureAwait(true);
 

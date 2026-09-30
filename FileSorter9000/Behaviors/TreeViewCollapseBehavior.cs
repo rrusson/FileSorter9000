@@ -1,21 +1,25 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Windows.Input;
 
-using Microsoft.Toolkit.Mvvm.Input;
-using Microsoft.Xaml.Interactivity;
+using CommunityToolkit.Mvvm.Input;
 
 using WinUI = Microsoft.UI.Xaml.Controls;
 
 namespace FileSorter9000.Behaviors
 {
-    public class TreeViewCollapseBehavior : Behavior<WinUI.TreeView>
+    public sealed class TreeViewCollapseBehavior
     {
+        private readonly WinUI.TreeView _treeView;
+
         public ICommand CollapseAllCommand { get; }
 
-        public TreeViewCollapseBehavior()
+        public TreeViewCollapseBehavior(WinUI.TreeView treeView)
         {
+            _treeView = treeView;
             CollapseAllCommand = new RelayCommand(() => CollapseNodes(AssociatedObject.RootNodes));
         }
+
+        private WinUI.TreeView AssociatedObject => _treeView;
 
         private void CollapseNodes(IList<WinUI.TreeViewNode> nodes)
         {

@@ -1,0 +1,7 @@
+{
+	"profiles": {
+		"FileSorter9000": {
+			"commandName": "MsixPackage"
+		}
+	}
+}

@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 
 using FileSorter9000.ViewModels;
 
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
 
 namespace FileSorter9000.Views
 {
@@ -20,6 +20,11 @@ namespace FileSorter9000.Views
         private async void ImageGalleryPage_Loaded(object sender, RoutedEventArgs e)
         {
             await ViewModel.LoadDataAsync();
+        }
+
+        private void Gallery_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            ViewModel.ItemSelectedCommand.Execute(e);
         }
     }
 }

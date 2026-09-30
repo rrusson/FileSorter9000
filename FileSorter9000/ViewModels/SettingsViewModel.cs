@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
@@ -7,11 +7,11 @@ using FileSorter9000.Core.Services;
 using FileSorter9000.Helpers;
 using FileSorter9000.Services;
 
-using Microsoft.Toolkit.Mvvm.ComponentModel;
-using Microsoft.Toolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
 using Windows.ApplicationModel;
-using Windows.UI.Xaml;
+using Microsoft.UI.Xaml;
 
 namespace FileSorter9000.ViewModels
 {

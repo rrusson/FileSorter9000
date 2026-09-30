@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -9,11 +9,9 @@ using FileSorter9000.Helpers;
 using FileSorter9000.Services;
 using FileSorter9000.Views;
 
-using Microsoft.Toolkit.Mvvm.ComponentModel;
-using Microsoft.Toolkit.Mvvm.Input;
-using Microsoft.Toolkit.Uwp.UI.Animations;
-
-using Windows.UI.Xaml.Controls;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Microsoft.UI.Xaml.Controls;
 
 namespace FileSorter9000.ViewModels
 {
@@ -48,7 +46,6 @@ namespace FileSorter9000.ViewModels
         {
             var selected = args.ClickedItem as SampleImage;
             ImagesNavigationHelper.AddImageId(ImageGallerySelectedIdKey, selected.ID);
-            NavigationService.Frame.SetListDataItemForNextConnectedAnimation(selected);
             NavigationService.Navigate<ImageGalleryDetailPage>(selected.ID);
         }
     }

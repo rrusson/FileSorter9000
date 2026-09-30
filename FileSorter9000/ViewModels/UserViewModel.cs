@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 
 using FileSorter9000.Helpers;
 
-using Microsoft.Toolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 
-using Windows.UI.Xaml.Media.Imaging;
+using Microsoft.UI.Xaml.Media.Imaging;
 
 namespace FileSorter9000.ViewModels
 {

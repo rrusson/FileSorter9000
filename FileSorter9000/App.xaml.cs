@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 using FileSorter9000.Core.Helpers;
 using FileSorter9000.Core.Services;
@@ -9,7 +9,7 @@ using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 
 using Windows.ApplicationModel.Activation;
-using Windows.UI.Xaml;
+using Microsoft.UI.Xaml;
 
 namespace FileSorter9000
 {
@@ -36,25 +36,18 @@ namespace FileSorter9000
             IdentityService.LoggedOut += OnLoggedOut;
         }
 
-        protected override async void OnLaunched(LaunchActivatedEventArgs args)
+        protected override async void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs args)
         {
             if (args == null)
             {
                 throw new ArgumentNullException(nameof(args));
             }
 
-            if (!args.PrelaunchActivated)
-            {
-                await ActivationService.ActivateAsync(args).ConfigureAwait(false);
-            }
-        }
-
-        protected override async void OnActivated(IActivatedEventArgs args)
-        {
             await ActivationService.ActivateAsync(args).ConfigureAwait(false);
         }
 
-        private void OnAppUnhandledException(object sender, Windows.UI.Xaml.UnhandledExceptionEventArgs e)
+
+        private void OnAppUnhandledException(object sender, Microsoft.UI.Xaml.UnhandledExceptionEventArgs e)
         {
             // TODO WTS: Please log and handle the exception as appropriate to your scenario
             // For more info see https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.unhandledexception
@@ -68,11 +61,6 @@ namespace FileSorter9000
         private UIElement CreateShell()
         {
             return new Views.ShellPage();
-        }
-
-        protected override async void OnBackgroundActivated(BackgroundActivatedEventArgs args)
-        {
-            await ActivationService.ActivateAsync(args).ConfigureAwait(false);
         }
 
         private async void OnLoggedOut(object sender, EventArgs e)
