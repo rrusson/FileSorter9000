@@ -1,4 +1,4 @@
-﻿namespace FileSorter9000.Behaviors
+namespace FileSorter9000.Behaviors
 {
     public enum NavigationViewHeaderMode
     {

@@ -1,12 +1,10 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
 
 using FileSorter9000.Helpers;
 
-using Windows.ApplicationModel.Core;
 using Windows.Storage;
-using Windows.UI.Core;
-using Windows.UI.Xaml;
+using Microsoft.UI.Xaml;
 
 namespace FileSorter9000.Services
 {
@@ -29,18 +27,15 @@ namespace FileSorter9000.Services
             await SaveThemeInSettingsAsync(Theme);
         }
 
-        public static async Task SetRequestedThemeAsync()
+        public static Task SetRequestedThemeAsync()
         {
-            foreach (var view in CoreApplication.Views)
+            var content = ActivationService.MainWindow.Content;
+            if (content is FrameworkElement frameworkElement)
             {
-                await view.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
-                {
-                    if (Window.Current.Content is FrameworkElement frameworkElement)
-                    {
-                        frameworkElement.RequestedTheme = Theme;
-                    }
-                });
+                frameworkElement.RequestedTheme = Theme;
             }
+
+            return Task.CompletedTask;
         }
 
         private static async Task<ElementTheme> LoadThemeFromSettingsAsync()

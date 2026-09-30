@@ -1,5 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+using System;
+using System.IO;
+
 using Mp3Mangler;
 
 namespace Mp3ManglerTest
@@ -19,7 +22,7 @@ namespace Mp3ManglerTest
 		[TestMethod]
 		public void GetAlphaAndArtistPath_Test()
 		{
-			string testFilePath = @"..\..\..\FileSorter9000\Assets\NerdRockFromTheSun.mp3";
+			string testFilePath = Path.Combine(AppContext.BaseDirectory, "TestItems", "NerdRockFromTheSun.mp3");
 
 			string newPath = _sut.GetAlphaAndArtistPath(testFilePath, @"C:\temp\");
 

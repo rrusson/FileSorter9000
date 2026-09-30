@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
+using System.Runtime.Versioning;
 
 using FileSorter9000.Core.Helpers;
 using FileSorter9000.Services;
@@ -8,6 +9,7 @@ using Windows.ApplicationModel.Activation;
 
 namespace FileSorter9000.Activation
 {
+    [SupportedOSPlatform("windows10.0.17763.0")]
     internal class DefaultActivationHandler : ActivationHandler<IActivatedEventArgs>
     {
         private readonly Type _navElement;
