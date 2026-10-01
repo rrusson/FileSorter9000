@@ -5,6 +5,8 @@ using Windows.Storage;
 using Windows.Storage.AccessCache;
 using Windows.Storage.Pickers;
 
+using FileSorter5000.Services;
+
 namespace FileSorter5000.Helpers
 {
     internal static class FolderHelper
@@ -18,6 +20,9 @@ namespace FileSorter5000.Helpers
             };
 
             picker.FileTypeFilter.Add("*");
+
+            var windowHandle = WinRT.Interop.WindowNative.GetWindowHandle(ActivationService.MainWindow);
+            WinRT.Interop.InitializeWithWindow.Initialize(picker, windowHandle);
 
             IStorageFolder folder = await picker.PickSingleFolderAsync();
             return folder ?? new StorageFolderFake();

@@ -81,7 +81,7 @@ namespace FileSorter5000.ViewModels
             VersionDescription = GetVersionDescription();
             IdentityService.LoggedOut += OnLoggedOut;
             UserDataService.UserDataUpdated += OnUserDataUpdated;
-            User = await UserDataService.GetUserAsync().ConfigureAwait(false);
+            User = await UserDataService.GetUserAsync();
         }
 
         private string GetVersionDescription()

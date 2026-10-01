@@ -207,11 +207,11 @@ Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Ma
     <value>Ok</value>
     <comment>First use prompt message primary button text</comment>
   </data>
-  <data name="Shell_UserInfoButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
+  <data name="Shell_UserInfoButton.[using:Microsoft.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
     <value>User info</value>
     <comment>Shell UserInfo button automation name property</comment>
   </data>
-  <data name="Shell_UserInfoButton.[using:Windows.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
+  <data name="Shell_UserInfoButton.[using:Microsoft.UI.Xaml.Controls]ToolTipService.ToolTip" xml:space="preserve">
     <value>User info</value>
     <comment>Shell UserInfo button tooltip property</comment>
   </data>

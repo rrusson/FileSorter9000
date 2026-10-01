@@ -38,7 +38,7 @@ namespace FileSorter5000.Services
         {
             if (_user == null)
             {
-                _user = await GetUserFromCacheAsync().ConfigureAwait(false);
+                _user = await GetUserFromCacheAsync();
                 if (_user == null)
                 {
                     _user = GetDefaultUserData();
@@ -62,26 +62,26 @@ namespace FileSorter5000.Services
 
         private async Task<UserViewModel> GetUserFromCacheAsync()
         {
-            var cacheData = await ApplicationData.Current.LocalFolder.ReadAsync<User>(_userSettingsKey).ConfigureAwait(false);
-            return await GetUserViewModelFromData(cacheData).ConfigureAwait(false);
+            var cacheData = await ApplicationData.Current.LocalFolder.ReadAsync<User>(_userSettingsKey);
+            return await GetUserViewModelFromData(cacheData);
         }
 
         private async Task<UserViewModel> GetUserFromGraphApiAsync()
         {
-            var accessToken = await IdentityService.GetAccessTokenForGraphAsync().ConfigureAwait(false);
+            var accessToken = await IdentityService.GetAccessTokenForGraphAsync();
             if (string.IsNullOrEmpty(accessToken))
             {
                 return null;
             }
 
-            var userData = await MicrosoftGraphService.GetUserInfoAsync(accessToken).ConfigureAwait(false);
+            var userData = await MicrosoftGraphService.GetUserInfoAsync(accessToken);
             if (userData != null)
             {
-                userData.Photo = await MicrosoftGraphService.GetUserPhoto(accessToken).ConfigureAwait(false);
-                await ApplicationData.Current.LocalFolder.SaveAsync(_userSettingsKey, userData).ConfigureAwait(false);
+                userData.Photo = await MicrosoftGraphService.GetUserPhoto(accessToken);
+                await ApplicationData.Current.LocalFolder.SaveAsync(_userSettingsKey, userData);
             }
 
-            return await GetUserViewModelFromData(userData).ConfigureAwait(false);
+            return await GetUserViewModelFromData(userData);
         }
 
         private async Task<UserViewModel> GetUserViewModelFromData(User userData)
@@ -93,7 +93,7 @@ namespace FileSorter5000.Services
 
             var userPhoto = string.IsNullOrEmpty(userData.Photo)
                 ? ImageHelper.ImageFromAssetsFile("DefaultIcon.png")
-                : await ImageHelper.ImageFromStringAsync(userData.Photo).ConfigureAwait(false);
+                : await ImageHelper.ImageFromStringAsync(userData.Photo);
 
             return new UserViewModel()
             {

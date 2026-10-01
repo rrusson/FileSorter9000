@@ -100,7 +100,7 @@ namespace FileSorter5000.ViewModels
             // More info on tracking issue https://github.com/Microsoft/microsoft-ui-xaml/issues/8
             _keyboardAccelerators.Add(_altLeftKeyboardAccelerator);
             _keyboardAccelerators.Add(_backKeyboardAccelerator);
-            User = await UserDataService.GetUserAsync().ConfigureAwait(false);
+            User = await UserDataService.GetUserAsync();
         }
 
         private void OnUserDataUpdated(object sender, UserViewModel userData)
@@ -158,6 +158,7 @@ namespace FileSorter5000.ViewModels
             if (e.SourcePageType == typeof(SettingsPage))
             {
                 Selected = _navigationView.SettingsItem as WinUI.NavigationViewItem;
+                ShowWaitSpinner = false;
                 return;
             }
 

@@ -4,10 +4,6 @@ using FileSorter9000.Core.Helpers;
 using FileSorter9000.Core.Services;
 using FileSorter5000.Services;
 
-using Microsoft.AppCenter;
-using Microsoft.AppCenter.Analytics;
-using Microsoft.AppCenter.Crashes;
-
 using Windows.ApplicationModel.Activation;
 using Microsoft.UI.Xaml;
 
@@ -28,8 +24,6 @@ namespace FileSorter5000
         {
             InitializeComponent();
 
-            // App center info https://docs.microsoft.com/appcenter/sdk/getting-started/uwp
-            AppCenter.Start("e62e719c-2b3d-42e0-992d-8284294ed315", typeof(Analytics), typeof(Crashes));
             UnhandledException += OnAppUnhandledException;
 
             _activationService = new Lazy<ActivationService>(CreateActivationService);

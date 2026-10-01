@@ -61,7 +61,7 @@
         <ProgressRing Name="waitSpinner"
                       AutomationProperties.Name="Progress image"
                       Visibility="Visible"
-                      IsActive="{Binding ShowWaitSpinner, Mode=OneWay}"
+                      IsActive="{x:Bind ViewModel.ShowWaitSpinner, Mode=OneWay}"
                       Width="150" Height="150" VerticalAlignment="Center" Margin="10,10,10,10"/>
 
         <Button x:Name="StartButton" Content="START"
