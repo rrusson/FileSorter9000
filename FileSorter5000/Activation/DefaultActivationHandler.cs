@@ -1,0 +1,45 @@
+using System;
+using System.Threading.Tasks;
+using System.Runtime.Versioning;
+
+using FileSorter9000.Core.Helpers;
+using FileSorter5000.Services;
+
+namespace FileSorter5000.Activation
+{
+    [SupportedOSPlatform("windows10.0.17763.0")]
+    internal class DefaultActivationHandler : ActivationHandler<object>
+    {
+        private readonly Type _navElement;
+
+        public DefaultActivationHandler(Type navElement)
+        {
+            _navElement = navElement;
+        }
+
+        protected override async Task HandleInternalAsync(object args)
+        {
+            // When the navigation stack isn't restored, navigate to the first page and configure
+            // the new page by passing required information in the navigation parameter
+            object arguments = null;
+            if (args is Microsoft.UI.Xaml.LaunchActivatedEventArgs launchArgs)
+            {
+                arguments = launchArgs.Arguments;
+            }
+
+            NavigationService.Navigate(_navElement, arguments);
+
+            // TODO: Add toast notifications when long-running events complete
+            //string msg = @"Click OK to see how activation from a toast notification can be handled in the ToastNotificationService.";
+            //Singleton<ToastNotificationsService>.Instance.ShowSimpleToastNotification("Sample Toast Notification", msg);
+
+            await Task.CompletedTask.ConfigureAwait(false);
+        }
+
+        protected override bool CanHandleInternal(object args)
+        {
+            // None of the ActivationHandlers has handled the app activation
+            return NavigationService.Frame.Content == null && _navElement != null;
+        }
+    }
+}
